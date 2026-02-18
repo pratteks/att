@@ -1,0 +1,33 @@
+{
+  "definitions": [
+    {
+      "title": "Rai Form",
+      "id": "rai-form",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Rai Form",
+              "model": "rai-form"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "rai-form",
+      "fields": [
+        {
+          "component": "text",
+          "name": "action",
+          "label": "Form Action URL",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
