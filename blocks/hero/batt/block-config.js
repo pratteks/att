@@ -12,6 +12,7 @@ import { moveInstrumentation } from '../../../scripts/scripts.js';
  *   heading        → h1-h6 → .hero-heading
  *   description    → <p> after heading → .hero-description
  *   CTA links      → <a> → .hero-cta-primary / .hero-cta-secondary
+ *   legal text     → <p> after CTAs → .hero-legal
  *   desktopImage   → <picture> in col 2 → .hero-media
  *   panelLayout    → classes: content-left | content-right | content-center
  *   theme          → classes: light-bg-img | dark-bg-img | light | dark
@@ -32,6 +33,7 @@ function decorateBattHero(block) {
     moveInstrumentation(contentCol, content);
     const children = [...contentCol.children];
     let eyebrowDone = false;
+    let ctaSeen = false;
 
     children.forEach((el) => {
       const isHeading = /^H[1-6]$/.test(el.tagName);
@@ -53,6 +55,10 @@ function decorateBattHero(block) {
           link.classList.add('button', 'secondary', 'hero-cta-secondary');
         }
         el.classList.add('button-container');
+        content.appendChild(el);
+        ctaSeen = true;
+      } else if (ctaSeen) {
+        el.classList.add('hero-legal');
         content.appendChild(el);
       } else {
         el.classList.add('hero-description');

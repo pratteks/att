@@ -6,8 +6,7 @@ Multi-brand hero block with brand-specific decoration and styling via the `multi
 
 ```
 blocks/hero/
-  _hero.json              # Base hero model (generic)
-  _batt-hero.json         # BATT hero model (AT&T Business)
+  _hero.json              # Hero model (AT&T Business fields + style variants)
   hero.js                 # Shared entry — delegates to renderBlock()
   hero.css                # Base hero CSS
   batt/
@@ -21,7 +20,7 @@ blocks/hero/
 
 ## How It Works
 
-1. Author adds **BATT Hero** in Universal Editor (definition id: `batt-hero`, model: `batt-hero`)
+1. Author adds **Hero** in Universal Editor (definition id: `hero`, model: `hero`)
 2. Block renders with table name `Hero` → class `hero` → loads from `blocks/hero/`
 3. `hero.js` calls `renderBlock()` from `multi-theme.js`
 4. `multi-theme.js` loads `blocks/hero/batt/block-config.js` when `<meta name="brand" content="batt">`
@@ -34,16 +33,28 @@ Source: `business.att.com` hero component.
 
 | AEM 6.5 Field | AEM 6.5 Selector | EDS Model Field | Component | Notes |
 |---|---|---|---|---|
-| Eyebrow | `.eyebrow-lg-desktop` | `eyebrow` | text | "AT&T Business" |
-| Heading | `h2` / `h1` | `text` (richtext) | richtext | Author uses h2 inside richtext |
+| Eyebrow | `.eyebrow-lg-desktop` | `eyebrow` | text | "AT&T Business" — optional, some pages omit it |
+| Heading | `h1` / `h2` | `text` (richtext) | richtext | Inner pages use h1, homepage uses h2 |
 | Description | `.wysiwyg-editor p` | `text` (richtext) | richtext | Paragraphs after the heading |
-| CTA Primary | `.cta a` | `text` (richtext) | richtext | Link in richtext becomes button |
-| CTA Secondary | `.cta a` (2nd) | `text` (richtext) | richtext | Second link becomes outline button |
+| CTA Primary | `.cta a.btn-primary` | `text` (richtext) | richtext | Link in richtext becomes button |
+| CTA Secondary | `.cta a.btn-secondary` | `text` (richtext) | richtext | Second link becomes outline button (optional) |
+| Legal/Disclaimer | `.type-legal-wysiwyg-editor` | `text` (richtext) | richtext | Small disclaimer text after CTAs (optional) |
 | Desktop Image | `data-desktop` on `.bg-hero-panel` | `image` | reference | EDS auto-generates responsive breakpoints |
 | Tablet Image | `data-tablet` | (same `image`) | — | Handled by `<picture>` sources |
 | Mobile Image | `data-mobile` | (same `image`) | — | Handled by `<picture>` sources |
 | Panel Layout | `data-comp-view="panelLeftContent"` | `classes` | multiselect | `content-left` / `content-right` / `content-center` |
 | Theme | `.theme-light-bg-img` | `classes` | multiselect | `light-bg-img` / `dark-bg-img` / `light` / `dark` |
+
+### Fields Not Mapped (intentionally excluded)
+
+| AEM 6.5 Feature | Selector / Attribute | Reason for Exclusion |
+|---|---|---|
+| Price component | `.price-comp` | Empty/unused on all inspected pages (placeholder only) |
+| Video background | `data-autoplay`, `data-video-src` | No pages use video heroes; can add as variant later |
+| Eyebrow size | `eyebrow-lg` / `eyebrow-xxl` / `eyebrow-xxxl` | CSS concern — EDS uses fixed styling, not author-selected sizes |
+| Image zoom | `.zoom-on-hover` | Universal default on all heroes — handled as CSS default |
+| Analytics tracking | `data-hero-title`, `data-hero-url` | AEM 6.5 analytics; EDS uses different analytics approach |
+| Disruptor overlay | `.overWritedDsruptor` | Separate component, not a hero content field |
 
 ## Model Fields
 
@@ -124,12 +135,13 @@ After `block-config.js` runs, the block DOM becomes:
 
 ## Authoring Guide
 
-1. In Universal Editor, add **BATT Hero** to a section
+1. In Universal Editor, add **Hero** to a section
 2. Fill in **Eyebrow** (e.g. "AT&T Business")
 3. In the **Text** richtext field:
-   - Type a heading and format it as **h2**
+   - Type a heading and format it as **h1** (inner pages) or **h2** (homepage)
    - Add description paragraphs below
    - Add CTA links — the first link becomes the primary button, the second becomes a secondary (outline) button
+   - (Optional) Add a small-text paragraph after the CTAs for legal disclaimers
 4. Select a **Background Image** from the DAM
 5. Add **Image Alt Text** for accessibility
 6. Under **Style**, select one layout variant and one theme variant

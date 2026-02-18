@@ -93,6 +93,16 @@
   line-height: 1.4;
 }
 
+/* Legal/disclaimer text — AEM 6.5: .type-legal-wysiwyg-editor, 12px */
+.hero .hero-legal {
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--dark-color, #454b52);
+  margin: 8px 0 0;
+  line-height: 1.4;
+}
+
 /* CTAs */
 .hero .button-container {
   margin: 0 0 12px;
@@ -276,9 +286,11 @@
 .hero.dark-bg-img .hero-eyebrow,
 .hero.dark-bg-img .hero-heading,
 .hero.dark-bg-img .hero-description,
+.hero.dark-bg-img .hero-legal,
 .hero.dark .hero-eyebrow,
 .hero.dark .hero-heading,
-.hero.dark .hero-description {
+.hero.dark .hero-description,
+.hero.dark .hero-legal {
   color: #fff;
 }
 
