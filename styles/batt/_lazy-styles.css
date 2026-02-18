@@ -1,4 +1,3 @@
-
-@import '../lazy-styles.css';
+@import url('../lazy-styles.css');
 
 /* batt specific lazy styles go here */

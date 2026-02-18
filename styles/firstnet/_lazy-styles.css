@@ -1,4 +1,3 @@
-
-@import '../lazy-styles.css';
+@import url('../lazy-styles.css');
 
 /* firstnet specific lazy styles go here */
