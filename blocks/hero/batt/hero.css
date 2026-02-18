@@ -1,6 +1,5 @@
-@import url('../hero.css');
-
-/* BATT Hero — brand-specific overrides
+/* BATT Hero — brand-specific overrides for blocks/hero
+ * Loaded only when <meta name="brand" content="batt">
  * Mapped from AEM 6.5 business.att.com hero component
  * Supports layout variants: content-left (default), content-right, content-center
  * Supports theme variants: light-bg-img (default), dark-bg-img, light, dark
@@ -64,7 +63,7 @@
   object-fit: cover;
 }
 
-/* Eyebrow */
+/* Eyebrow — AEM 6.5: .eyebrow-lg-desktop, 18px attAleckSans-Regular */
 .hero .hero-eyebrow {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-s);
@@ -74,7 +73,7 @@
   line-height: 1.4;
 }
 
-/* Heading */
+/* Heading — AEM 6.5: h2, 38px attAleckSans-Bold */
 .hero .hero-heading {
   font-family: var(--heading-font-family);
   font-size: var(--heading-font-size-xl);
@@ -84,7 +83,7 @@
   line-height: 1.15;
 }
 
-/* Description */
+/* Description — AEM 6.5: .wysiwyg-editor p, 17px attAleckSans-Regular */
 .hero .hero-description {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-xs);
@@ -138,7 +137,7 @@
   text-decoration: none;
 }
 
-/* Desktop layout */
+/* ===== Desktop layout (>= 900px) ===== */
 @media (width >= 900px) {
   .hero {
     min-height: 500px;
@@ -149,11 +148,13 @@
     align-items: stretch;
   }
 
+  /* Content takes left half by default */
   .hero .hero-content {
     width: 50%;
     padding: 60px 40px 60px 48px;
   }
 
+  /* Media fills right half */
   .hero .hero-media {
     width: 50%;
     min-height: unset;
@@ -180,14 +181,16 @@
   }
 }
 
-/* Large desktop */
+/* ===== Large desktop (>= 1200px) ===== */
 @media (width >= 1200px) {
   .hero .hero-content {
     padding: 80px 48px 80px 64px;
   }
 }
 
-/* Content Right */
+/* ===== Layout Variants ===== */
+
+/* Content Right — swap column order */
 .hero.content-right .hero-inner {
   flex-direction: column-reverse;
 }
@@ -208,7 +211,7 @@
   }
 }
 
-/* Content Center */
+/* Content Center — full-width background image, centered overlay */
 .hero.content-center {
   text-align: center;
   align-items: center;
@@ -252,17 +255,19 @@
   }
 }
 
-/* Light with Background Image (default) */
+/* ===== Theme Variants ===== */
+
+/* Light with Background Image (default) — dark text on light bg */
 .hero.light-bg-img {
   background-color: var(--background-color, #fff);
 }
 
-/* Light */
+/* Light variant (no background image) */
 .hero.light {
   background-color: var(--light-color, #f8f8f8);
 }
 
-/* Dark variants */
+/* Dark variants — shared inverse text and CTA styles */
 .hero.dark-bg-img,
 .hero.dark {
   background-color: var(--dark-color, #25303a);
