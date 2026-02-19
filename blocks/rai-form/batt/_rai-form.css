@@ -1,0 +1,42 @@
+@import url('../rai-form.css');
+
+/* BATT RAI Form — brand-specific overrides */
+
+.rai-form {
+  background-color: var(--color-white, #fff);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  padding: 32px;
+}
+
+.rai-form .form-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (width >= 600px) {
+  .rai-form .form-fields-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Comment field spans full width */
+  .rai-form .form-fields-grid .form-field:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.rai-form input.invalid,
+.rai-form textarea.invalid {
+  border-color: #d32f2f;
+}
+
+.rai-form button[type="submit"] {
+  background-color: var(--link-color, #0568ae);
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.rai-form button[type="submit"]:hover {
+  background-color: var(--link-hover-color, #004a87);
+}
