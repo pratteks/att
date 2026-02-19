@@ -5,6 +5,7 @@
  */
 
 /* Container resets */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -23,6 +24,7 @@
 }
 
 /* Background image */
+
 .hero .hero-bg {
   position: absolute;
   inset: 0;
@@ -43,6 +45,7 @@
 }
 
 /* Content overlay */
+
 .hero .hero-content {
   position: relative;
   z-index: 1;
@@ -189,3 +192,13 @@
     min-height: 360px;
   }
 }
+
+/* Brand-specific overrides for hero block */
+
+/* .hero {
+  h1 {
+    background-color: red;
+  }
+
+
+} */

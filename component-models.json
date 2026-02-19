@@ -203,15 +203,39 @@
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
+        "label": "Alt Text",
         "value": ""
       },
       {
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "Content",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Dark Theme",
+            "value": "dark"
+          },
+          {
+            "name": "Split Layout",
+            "value": "split"
+          },
+          {
+            "name": "Short Height",
+            "value": "short"
+          },
+          {
+            "name": "Zoom on Hover",
+            "value": "zoom"
+          }
+        ]
       }
     ]
   }

@@ -1,5 +1,9 @@
 {
   "type": "xwalk",
   "contentHostUrl": "author-p170502-e1825534.adobeaemcloud.com",
-  "baseUrl": "https://www.business.att.com/"
+  "baseUrl": "https://www.business.att.com/",
+  "aemSitePath": "/content/att",
+  "aemAssetsFolderPath": "/content/dam/att",
+  "aemSiteName": "att",
+  "aemSiteTitle": "att"
 }

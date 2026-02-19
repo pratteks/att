@@ -1,4 +1,197 @@
-@import url('../hero.css');
+/*
+ * Hero Block - Base Structural CSS
+ * Brand-agnostic layout and positioning.
+ * Brand-specific styling goes in {brand}/_hero.css
+ */
+
+/* Container resets */
+
+.hero-container .hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* ============================================
+   DEFAULT LAYOUT (background image + overlay)
+   ============================================ */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* Background image */
+
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero .hero-bg picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .hero-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content overlay */
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: var(--spacing-section, 40px) var(--spacing-l, 24px);
+}
+
+/* ============================================
+   SPLIT LAYOUT (image + content side by side)
+   ============================================ */
+
+.hero.split {
+  min-height: auto;
+  align-items: stretch;
+}
+
+.hero.split .hero-split {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero.split .hero-image {
+  flex: 1 1 auto;
+}
+
+.hero.split .hero-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero.split .hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero.split .hero-content {
+  position: static;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (width >= 900px) {
+  .hero.split .hero-split {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .hero.split .hero-image {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .hero.split .hero-content {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+}
+
+/* ============================================
+   SHORT VARIANT
+   ============================================ */
+
+.hero.short {
+  min-height: 280px;
+}
+
+/* ============================================
+   ZOOM-ON-HOVER VARIANT
+   ============================================ */
+
+.hero.zoom .hero-bg img {
+  transition: transform 0.6s ease;
+}
+
+.hero.zoom:hover .hero-bg img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   CONTENT ELEMENTS (structural defaults)
+   ============================================ */
+
+.hero .hero-eyebrow {
+  margin: 0;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+  margin-top: 0;
+}
+
+.hero .hero-description {
+  margin-top: 0;
+}
+
+.hero .hero-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero .hero-legal {
+  margin-top: var(--spacing-m, 16px);
+}
+
+.hero .hero-cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m, 16px);
+  align-items: center;
+}
+
+.hero .hero-cta-container .button-container {
+  margin: 0;
+}
+
+.hero .hero-cta-container a.button:any-link {
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (width >= 900px) {
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero .hero-content {
+    padding: var(--spacing-xxl, 48px) var(--spacing-xl, 32px);
+  }
+
+  .hero.short {
+    min-height: 360px;
+  }
+}
 
 /*
  * Hero Block - AT&T Business (batt) Brand Overrides
@@ -25,6 +218,7 @@
    ============================================ */
 
 /* Eyebrow */
+
 .hero .hero-eyebrow {
   font-family: var(--heading-font-family);
   font-size: var(--body-font-size-s, 15px);
@@ -35,6 +229,7 @@
 }
 
 /* Heading */
+
 .hero h1 {
   font-family: var(--heading-font-family);
   font-size: var(--heading-font-size-xxl);
@@ -45,6 +240,7 @@
 }
 
 /* Description */
+
 .hero .hero-description {
   font-size: var(--body-font-size-l, 17px);
   line-height: 1.5;
@@ -52,6 +248,7 @@
 }
 
 /* Checklist */
+
 .hero .hero-checklist li {
   position: relative;
   padding-left: 28px;
@@ -72,12 +269,14 @@
 }
 
 /* CTA Container */
+
 .hero .hero-cta-container {
   margin-top: var(--spacing-l, 24px);
   margin-bottom: var(--spacing-xs, 8px);
 }
 
 /* Legal Text */
+
 .hero .hero-legal {
   font-size: var(--body-font-size-legal, 11px);
   line-height: 1.45;
@@ -164,6 +363,7 @@
 }
 
 /* Dark theme buttons */
+
 .hero.dark a.button:any-link {
   background-color: var(--text-color-light, #fff);
   color: var(--att-blue, #00388f);
