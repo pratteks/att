@@ -109,11 +109,12 @@ function attachEventListners(main) {
 }
 
 function getBrandFilterFileName() {
-const path = document.location.pathname;
-const segments = path.split('/');
-const siteName = segments[2];
-const fileName = `component-filters-${siteName}.json`;
-console.log(fileName);
+      const path = document.location.pathname;
+      const segments = path.split('/');
+      const siteName = segments[2];
+      const fileName = `component-filters-${siteName}.json`;
+      console.log(fileName);
+      return fileName;
 }
 
 function loadFilterByPath() {
