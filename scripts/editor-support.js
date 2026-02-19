@@ -108,7 +108,23 @@ function attachEventListners(main) {
   }));
 }
 
+function loadFilterByPath() {
+  const currentFilterJson = 'component-filters-firstnet.json';
+  console.log(currentFilterJson);
+  if (currentFilterJson) {
+    const oldScript = document.querySelector('script[src*="/component-filters"]');
+    const lastSlashIndex = oldScript.src.lastIndexOf('/');
+    const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
+    const newScript = document.createElement('script');
+    newScript.src = newSrc;
+    newScript.type = oldScript.type;
+    oldScript.parentNode.replaceChild(newScript, oldScript); // Replace the script
+    console.log(newScript);
+  }
+}
+
 attachEventListners(document.querySelector('main'));
+loadFilterByPath();
 
 // decorate rich text
 // this has to happen after decorateMain(), and everythime decorateBlocks() is called
