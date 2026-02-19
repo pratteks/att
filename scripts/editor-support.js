@@ -109,7 +109,7 @@ function attachEventListners(main) {
 }
 
 function getComponentFilterFileName() {
-  const hash = window.location.hash.substring(1);
+  const hash = document.location.hash.substring(1);
   const contentPart = hash.split('/canvas/')[1];
   if (!contentPart) return null;
   const url = new URL("https://" + contentPart);
