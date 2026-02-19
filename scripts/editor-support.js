@@ -108,18 +108,16 @@ function attachEventListners(main) {
   }));
 }
 
-function getComponentFilterFileName() {
-  const hash = document.location.pathname.substring(1);
-  const contentPart = hash.split('/canvas/')[1];
-  if (!contentPart) return null;
-  const url = new URL("https://" + contentPart);
-  const segments = url.pathname.split('/');
-  const siteName = segments[2];
-  return `component-filters-${siteName}.json`;
+function getBrandFilterFileName() {
+const path = document.location.pathname;
+const segments = path.split('/');
+const siteName = segments[2];
+const fileName = `component-filters-${siteName}.json`;
+console.log(fileName);
 }
 
 function loadFilterByPath() {
-    const currentFilterJson = getComponentFilterFileName();
+    const currentFilterJson = getBrandFilterFileName();
     console.log(currentFilterJson);
     if (currentFilterJson) {
         const oldScript = document.querySelector('script[src*="/component-filters"]');
