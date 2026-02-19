@@ -108,19 +108,29 @@ function attachEventListners(main) {
   }));
 }
 
+function getComponentFilterFileName() {
+  const hash = window.location.hash.substring(1);
+  const contentPart = hash.split('/canvas/')[1];
+  if (!contentPart) return null;
+  const url = new URL("https://" + contentPart);
+  const segments = url.pathname.split('/');
+  const siteName = segments[2];
+  return `component-filters-${siteName}.json`;
+}
+
 function loadFilterByPath() {
-  const currentFilterJson = 'component-filters-firstnet.json';
-  console.log(currentFilterJson);
-  if (currentFilterJson) {
-    const oldScript = document.querySelector('script[src*="/component-filters"]');
-    const lastSlashIndex = oldScript.src.lastIndexOf('/');
-    const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
-    const newScript = document.createElement('script');
-    newScript.src = newSrc;
-    newScript.type = oldScript.type;
-    oldScript.parentNode.replaceChild(newScript, oldScript); // Replace the script
-    console.log(newScript);
-  }
+    const currentFilterJson = getComponentFilterFileName();
+    console.log(currentFilterJson);
+    if (currentFilterJson) {
+        const oldScript = document.querySelector('script[src*="/component-filters"]');
+        const lastSlashIndex = oldScript.src.lastIndexOf('/');
+        const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
+        const newScript = document.createElement('script');
+        newScript.src = newSrc;
+        newScript.type = oldScript.type;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+        console.log(newScript);
+    }
 }
 
 attachEventListners(document.querySelector('main'));
