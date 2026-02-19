@@ -1,17 +1,38 @@
-// import { beforeDecorate, decorateBlock, afterDecorate } from '../{{name}}.js';
+/**
+ * BATT brand — adds rounded card style and a "featured" variation.
+ *
+ * Merged with the global config via mergeConfig():
+ *   flags:       global { showImage, cardStyle } + brand { cardStyle } → cardStyle overridden
+ *   variations:  global [ horizontal ] + brand [ featured ] → both available
+ *   decorations: global { decorate } + brand { afterDecorate } → both run
+ */
+
+function afterDecorate(block, blockConfig) {
+  const { cardStyle } = blockConfig.flags;
+  if (cardStyle === 'rounded') {
+    block.querySelectorAll('li').forEach((li) => {
+      li.classList.add('cards-card-rounded');
+    });
+  }
+}
+
+function decorateFeatured(block) {
+  const firstCard = block.querySelector('li');
+  if (firstCard) {
+    firstCard.classList.add('cards-card-featured');
+  }
+}
 
 export default async function getBlockConfigs() {
   return {
     flags: {
-      // flag: true,
+      cardStyle: 'rounded',
     },
     variations: [
-      // { variation: 'multi-column-category-banner', module: 'multi-column-cat-banner.js' },
+      { variation: 'featured', method: decorateFeatured },
     ],
     decorations: {
-    //   beforeDecorate: async (ctx, blockConfig) => beforeDecorate(ctx, blockConfig),
-    //   decorate: async (ctx, blockConfig) => decorateBlock(ctx, blockConfig),
-    //   afterDecorate: async (ctx, blockConfig) => afterDecorate(ctx, blockConfig),
+      afterDecorate,
     },
   };
 }

@@ -142,6 +142,31 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "description": "Card layout variations. 'Horizontal' is global; 'Featured' applies in BATT brand; 'Compact' applies in FirstNet brand.",
+        "options": [
+          {
+            "name": "Horizontal",
+            "value": "horizontal"
+          },
+          {
+            "name": "Featured",
+            "value": "featured"
+          },
+          {
+            "name": "Compact",
+            "value": "compact"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -156,6 +181,30 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "media_imageAlt",
+        "label": "Image Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "content_text",
+        "label": "Slide Content",
         "valueType": "string"
       }
     ]
@@ -255,6 +304,88 @@
             "value": "dark"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "pricing",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "description": "Pricing layout variations. 'Compact' reduces padding; 'Detailed' shows expanded features; 'Enterprise' applies in BATT brand.",
+        "options": [
+          {
+            "name": "Compact",
+            "value": "compact"
+          },
+          {
+            "name": "Detailed",
+            "value": "detailed"
+          },
+          {
+            "name": "Enterprise",
+            "value": "enterprise"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pricing-plan",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Plan Name",
+        "description": "Display name for the pricing tier (e.g. 'Starter', 'Professional')"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "price",
+        "label": "Price",
+        "description": "Price display (e.g. '$29.99')"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "period",
+        "label": "Billing Period",
+        "description": "Billing frequency (e.g. '/month', '/year')"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "features",
+        "label": "Features",
+        "description": "One feature per paragraph. Each paragraph becomes a list item."
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA Link",
+        "description": "Call-to-action button linking to signup or contact page"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "description": "Button label (e.g. 'Get Started', 'Contact Sales')"
+      }
+    ]
+  },
+  {
+    "id": "rai-form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "action",
+        "label": "Form Action URL",
+        "valueType": "string"
       }
     ]
   }

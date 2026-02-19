@@ -1,0 +1,30 @@
+@import url('../pricing.css');
+
+/* BATT brand pricing — AT&T blue accents */
+
+.pricing .pricing-plan {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+}
+
+.pricing .pricing-plan-best-value {
+  border: 2px solid #0568ae;
+}
+
+.pricing .pricing-plan-best-value::before {
+  background-color: #0568ae;
+}
+
+.pricing .pricing-plan-price {
+  color: #0568ae;
+}
+
+.pricing .pricing-plan-cta a {
+  background-color: #0568ae;
+  border-radius: 28px;
+}
+
+.pricing .pricing-plan-cta a:hover {
+  background-color: #004a87;
+}

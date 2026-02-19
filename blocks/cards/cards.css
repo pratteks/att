@@ -25,3 +25,20 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* Horizontal variation */
+.cards > ul > li.cards-card-horizontal {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+}
+
+.cards > ul > li.cards-card-horizontal .cards-card-image img {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .cards > ul > li.cards-card-horizontal {
+    grid-template-columns: 200px 1fr;
+  }
+}

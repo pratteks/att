@@ -1,0 +1,160 @@
+.pricing {
+  padding: 32px 0;
+}
+
+.pricing .pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pricing .pricing-plan {
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  padding: 32px 24px;
+  background-color: var(--background-color, #fff);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pricing .pricing-plan-name {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 8px;
+}
+
+.pricing .pricing-plan-price {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  color: var(--link-color);
+  margin: 0 0 4px;
+}
+
+.pricing .pricing-plan-period {
+  font-size: var(--body-font-size-xs);
+  color: var(--dark-color);
+  margin: 0 0 16px;
+}
+
+.pricing .pricing-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.pricing .pricing-plan-features li {
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: var(--body-font-size-xs);
+}
+
+.pricing .pricing-plan-features li::before {
+  content: '\2713';
+  color: var(--link-color);
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.pricing .pricing-plan-cta {
+  margin-top: auto;
+}
+
+.pricing .pricing-plan-cta a {
+  display: block;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--link-color);
+  color: #fff;
+  text-align: center;
+}
+
+.pricing .pricing-plan-cta a:hover {
+  background-color: var(--link-hover-color);
+}
+
+/* Best-value highlight */
+.pricing .pricing-plan-best-value {
+  border-color: var(--link-color);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+  position: relative;
+}
+
+.pricing .pricing-plan-best-value::before {
+  content: 'Best Value';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Compact variation */
+.pricing.compact .pricing-plan {
+  padding: 20px 16px;
+}
+
+.pricing.compact .pricing-plan-name {
+  font-size: var(--heading-font-size-s);
+}
+
+.pricing.compact .pricing-plan-price {
+  font-size: var(--heading-font-size-m);
+}
+
+@media (width >= 600px) {
+  .pricing .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .pricing .pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@import url('../pricing.css');
+
+/* FirstNet brand pricing — navy + orange accent */
+
+.pricing .pricing-plan {
+  border: 2px solid #1b2b3a;
+  border-radius: 4px;
+}
+
+.pricing .pricing-plan-best-value {
+  border-color: #e85d04;
+}
+
+.pricing .pricing-plan-best-value::before {
+  background-color: #e85d04;
+}
+
+.pricing .pricing-plan-price {
+  color: #1b2b3a;
+}
+
+.pricing .pricing-plan-cta a {
+  background-color: #e85d04;
+  border-radius: 4px;
+}
+
+.pricing .pricing-plan-cta a:hover {
+  background-color: #c44d03;
+}
+

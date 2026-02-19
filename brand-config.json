@@ -3,5 +3,7 @@
     "batt",
     "firstnet"
   ],
-  "themes": []
+  "themes": [
+    "dark"
+  ]
 }

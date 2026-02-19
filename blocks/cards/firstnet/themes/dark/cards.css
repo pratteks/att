@@ -1,0 +1,72 @@
+.cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  gap: 24px;
+}
+
+.cards > ul > li {
+  border: 1px solid #dadada;
+  background-color: var(--background-color);
+}
+
+.cards .cards-card-body {
+  margin: 16px;
+}
+
+.cards .cards-card-image {
+  line-height: 0;
+}
+
+.cards > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Horizontal variation */
+.cards > ul > li.cards-card-horizontal {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+}
+
+.cards > ul > li.cards-card-horizontal .cards-card-image img {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .cards > ul > li.cards-card-horizontal {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@import url('../cards.css');
+
+/* FirstNet brand — navy + orange accent, bordered style, no-image default */
+
+.cards > ul > li {
+  border: 2px solid #1b2b3a;
+  background-color: #f5f7fa;
+}
+
+.cards .cards-card-body {
+  padding: 20px;
+}
+
+.cards .cards-card-body h3,
+.cards .cards-card-body h4 {
+  color: #1b2b3a;
+}
+
+.cards .cards-card-body a {
+  color: #e85d04;
+}
+
+.cards-firstnet .cards-card-compact {
+  padding: 12px;
+  font-size: var(--body-font-size-xs);
+}
+

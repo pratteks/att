@@ -1,11 +1,29 @@
 @import url('../cards.css');
 
-/* Brand-specific overrides for cards block */
+/* BATT brand — AT&T blue accent, rounded cards */
 
-/* .cards {
-  h1 {
-    background-color: red;
-  }
+.cards > ul > li {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  background-color: var(--background-color, #fff);
+}
 
+.cards .cards-card-rounded {
+  border-radius: 16px;
+}
 
-} */
+.cards .cards-card-body {
+  padding: 20px;
+}
+
+.cards .cards-card-body h3,
+.cards .cards-card-body h4 {
+  color: var(--link-color, #0568ae);
+}
+
+.cards .cards-card-featured {
+  border: 2px solid var(--link-color, #0568ae);
+  box-shadow: 0 4px 16px rgb(5 104 174 / 20%);
+}

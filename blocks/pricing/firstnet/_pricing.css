@@ -1,0 +1,29 @@
+@import url('../pricing.css');
+
+/* FirstNet brand pricing — navy + orange accent */
+
+.pricing .pricing-plan {
+  border: 2px solid #1b2b3a;
+  border-radius: 4px;
+}
+
+.pricing .pricing-plan-best-value {
+  border-color: #e85d04;
+}
+
+.pricing .pricing-plan-best-value::before {
+  background-color: #e85d04;
+}
+
+.pricing .pricing-plan-price {
+  color: #1b2b3a;
+}
+
+.pricing .pricing-plan-cta a {
+  background-color: #e85d04;
+  border-radius: 4px;
+}
+
+.pricing .pricing-plan-cta a:hover {
+  background-color: #c44d03;
+}

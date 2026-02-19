@@ -15,7 +15,10 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "pricing",
+      "pricing-compact",
+      "pricing-detailed"
     ]
   },
   {
@@ -37,6 +40,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "pricing",
+    "components": [
+      "pricing-plan"
     ]
   }
 ]

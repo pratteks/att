@@ -9,7 +9,10 @@
     "id": "section",
     "components": [
       "text",
-      "image"
+      "image",
+      "pricing",
+      "pricing-compact",
+      "pricing-detailed"
     ]
   },
   {
@@ -31,6 +34,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "pricing",
+    "components": [
+      "pricing-plan"
     ]
   }
 ]

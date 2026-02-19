@@ -1,11 +1,26 @@
 @import url('../cards.css');
 
-/* Brand-specific overrides for cards block */
+/* FirstNet brand — navy + orange accent, bordered style, no-image default */
 
-/* .cards {
-  h1 {
-    background-color: red;
-  }
+.cards > ul > li {
+  border: 2px solid #1b2b3a;
+  background-color: #f5f7fa;
+}
 
+.cards .cards-card-body {
+  padding: 20px;
+}
 
-} */
+.cards .cards-card-body h3,
+.cards .cards-card-body h4 {
+  color: #1b2b3a;
+}
+
+.cards .cards-card-body a {
+  color: #e85d04;
+}
+
+.cards-firstnet .cards-card-compact {
+  padding: 12px;
+  font-size: var(--body-font-size-xs);
+}

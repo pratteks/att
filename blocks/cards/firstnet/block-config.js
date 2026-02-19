@@ -1,17 +1,33 @@
-// import { beforeDecorate, decorateBlock, afterDecorate } from '../{{name}}.js';
+/**
+ * FirstNet brand — bordered card style, hides images by default.
+ *
+ * Merged with the global config via mergeConfig():
+ *   flags:       global { showImage, cardStyle } + brand { showImage, cardStyle } → both overridden
+ *   variations:  global [ horizontal ] + brand [ compact ] → both available
+ *   decorations: global { decorate } + brand { beforeDecorate } → both run
+ */
+
+function beforeDecorate(block) {
+  block.classList.add('cards-firstnet');
+}
+
+function decorateCompact(block) {
+  block.querySelectorAll('li').forEach((li) => {
+    li.classList.add('cards-card-compact');
+  });
+}
 
 export default async function getBlockConfigs() {
   return {
     flags: {
-      // flag: true,
+      showImage: false,
+      cardStyle: 'bordered',
     },
     variations: [
-      // { variation: 'multi-column-category-banner', module: 'multi-column-cat-banner.js' },
+      { variation: 'compact', method: decorateCompact },
     ],
     decorations: {
-    //   beforeDecorate: async (ctx, blockConfig) => beforeDecorate(ctx, blockConfig),
-    //   decorate: async (ctx, blockConfig) => decorateBlock(ctx, blockConfig),
-    //   afterDecorate: async (ctx, blockConfig) => afterDecorate(ctx, blockConfig),
+      beforeDecorate,
     },
   };
 }
