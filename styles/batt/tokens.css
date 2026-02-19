@@ -1,0 +1,126 @@
+/*
+ * AT&T Business (batt) — Design Tokens
+ * Extracted from business.att.com
+ *
+ * These tokens override the global :root values when the
+ * <meta name="brand" content="batt"> tag is present.
+ * Loaded by scripts.js → loadBrandThemeCss().
+ */
+
+:root {
+  /* =============================================
+     COLORS
+     ============================================= */
+
+  /* Primary brand */
+  --brand-primary: #00388f;          /* AT&T Business dark blue — primary CTA bg */
+  --brand-primary-hover: #002a6b;    /* Darker shade for hover */
+  --brand-secondary: #0568ae;        /* AT&T medium blue */
+  --brand-accent: #f2fafd;           /* Light blue tint — secondary CTA bg, section bg */
+
+  /* Semantic colors */
+  --background-color: #fff;
+  --light-color: #f2fafd;            /* Light blue tint (replaces generic #f8f8f8) */
+  --dark-color: #1d2329;             /* Near-black — headings */
+  --text-color: #333;                /* Body text */
+  --text-color-secondary: #454b52;   /* Paragraph / subtle text */
+  --text-color-muted: #878c94;       /* Placeholder, muted labels */
+  --link-color: #0074b3;             /* AT&T link blue */
+  --link-hover-color: #00588a;       /* Link hover */
+  --footer-text-color: #444;
+
+  /* =============================================
+     TYPOGRAPHY
+     ============================================= */
+
+  /* Font families — AT&T Aleck Sans (proprietary, self-hosted) */
+  --body-font-family: 'ATT Aleck Sans', att-aleck-sans-fallback, Arial, sans-serif;
+  --heading-font-family: 'ATT Aleck Sans', att-aleck-sans-fallback, Arial, sans-serif;
+
+  /* Body sizes */
+  --body-font-size-m: 17px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* Heading sizes (mobile-first) */
+  --heading-font-size-xxl: 38px;
+  --heading-font-size-xl: 38px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* Line heights */
+  --body-line-height: 1.4;
+  --heading-line-height: 1.15;
+
+  /* Letter spacing */
+  --heading-letter-spacing: -0.03em;
+  --body-letter-spacing: normal;
+
+  /* =============================================
+     BUTTONS
+     ============================================= */
+
+  --button-font-family: 'ATT Aleck Sans', att-aleck-sans-fallback, Arial, sans-serif;
+  --button-font-weight: 700;
+  --button-font-size: 14px;
+  --button-border-radius: 28px;
+  --button-padding: 12px 32px;
+  --button-bg: var(--brand-primary);
+  --button-color: #fff;
+  --button-hover-bg: var(--brand-primary-hover);
+  --button-hover-color: #fff;
+  --button-transition: background-color 0.2s ease;
+
+  /* Secondary button */
+  --button-secondary-bg: var(--brand-accent);
+  --button-secondary-color: var(--brand-primary);
+  --button-secondary-border: none;
+  --button-secondary-hover-bg: #e0f0f8;
+
+  /* Outline button */
+  --button-outline-bg: transparent;
+  --button-outline-color: var(--brand-accent);
+  --button-outline-border: 2px solid var(--brand-accent);
+
+  /* =============================================
+     FORMS
+     ============================================= */
+
+  --input-border: 1px solid #878c94;
+  --input-border-radius: 8px;
+  --input-padding: 12px 16px;
+  --input-font-size: 14px;
+
+  /* =============================================
+     LAYOUT & SPACING
+     ============================================= */
+
+  --nav-height: 56px;
+  --section-padding: 40px 0;
+  --content-max-width: 1200px;
+
+  /* =============================================
+     FOOTER
+     ============================================= */
+
+  --footer-font-size: 13px;
+}
+
+@media (width >= 900px) {
+  :root {
+    /* Heading sizes — desktop */
+    --heading-font-size-xxl: 48px;
+    --heading-font-size-xl: 38px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 26px;
+    --heading-font-size-s: 22px;
+    --heading-font-size-xs: 18px;
+
+    /* Body sizes — desktop */
+    --body-font-size-m: 17px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
+  }
+}
