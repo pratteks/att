@@ -107,8 +107,9 @@ export function loadBrandThemeCss() {
   const brandPath = brandCode ? `${brandCode}/` : '';
   const themePath = themeCode ? `themes/${themeCode}/` : '';
 
-  // Styles to load
+  // Styles to load (fonts first for earliest rendering)
   const stylesheets = [
+    `${window.hlx.codeBasePath}/styles/${brandPath}${themePath}fonts.css`,
     `${window.hlx.codeBasePath}/styles/${brandPath}${themePath}tokens.css`,
     `${window.hlx.codeBasePath}/styles/${brandPath}${themePath}styles.css`,
   ];

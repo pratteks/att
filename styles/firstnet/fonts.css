@@ -18,6 +18,7 @@
    ============================================= */
 
 /* Brooklyn — Medium (500) — primary heading weight */
+
 @font-face {
   font-family: Brooklyn;
   font-style: normal;
@@ -27,6 +28,7 @@
 }
 
 /* Brooklyn — Bold (700) */
+
 @font-face {
   font-family: Brooklyn;
   font-style: normal;
@@ -36,6 +38,7 @@
 }
 
 /* Brooklyn — Book / Regular (400) */
+
 @font-face {
   font-family: Brooklyn;
   font-style: normal;
@@ -45,6 +48,7 @@
 }
 
 /* Brooklyn — Light (300) */
+
 @font-face {
   font-family: Brooklyn;
   font-style: normal;
@@ -54,6 +58,7 @@
 }
 
 /* Brooklyn — Extra Bold (800) */
+
 @font-face {
   font-family: Brooklyn;
   font-style: normal;
@@ -63,6 +68,7 @@
 }
 
 /* Fallback font — size-adjusted to match Brooklyn metrics */
+
 @font-face {
   font-family: brooklyn-fallback;
   size-adjust: 100%;
@@ -75,6 +81,7 @@
    ============================================= */
 
 /* AT&T Aleck Sans — Regular (400) */
+
 @font-face {
   font-family: 'ATT Aleck Sans';
   font-style: normal;
@@ -84,6 +91,7 @@
 }
 
 /* AT&T Aleck Sans — Medium (500) */
+
 @font-face {
   font-family: 'ATT Aleck Sans';
   font-style: normal;
@@ -93,6 +101,7 @@
 }
 
 /* AT&T Aleck Sans — Bold (700) */
+
 @font-face {
   font-family: 'ATT Aleck Sans';
   font-style: normal;
@@ -102,6 +111,7 @@
 }
 
 /* AT&T Aleck Sans — Light (300) */
+
 @font-face {
   font-family: 'ATT Aleck Sans';
   font-style: normal;
@@ -111,6 +121,7 @@
 }
 
 /* Fallback font — size-adjusted to match AT&T Aleck Sans metrics */
+
 @font-face {
   font-family: att-aleck-sans-fallback;
   size-adjust: 97%;

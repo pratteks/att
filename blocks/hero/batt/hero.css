@@ -1,17 +1,56 @@
-/* BATT Hero — brand-specific overrides for blocks/hero
- * Loaded only when <meta name="brand" content="batt">
+.hero-container .hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero h1 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero {
+    padding: 40px 32px;
+  }
+}
+
+/* BATT Hero — brand-specific overrides
  * Mapped from AEM 6.5 business.att.com hero component
  * Supports layout variants: content-left (default), content-right, content-center
  * Supports theme variants: light-bg-img (default), dark-bg-img, light, dark
  */
 
 /* Container reset */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
 }
 
 /* Block base */
+
 .hero {
   position: relative;
   display: flex;
@@ -22,6 +61,7 @@
 }
 
 /* Inner layout wrapper */
+
 .hero .hero-inner {
   display: flex;
   flex-direction: column;
@@ -32,6 +72,7 @@
 }
 
 /* Content panel */
+
 .hero .hero-content {
   display: flex;
   flex-direction: column;
@@ -43,6 +84,7 @@
 }
 
 /* Media panel */
+
 .hero .hero-media {
   position: relative;
   width: 100%;
@@ -63,7 +105,8 @@
   object-fit: cover;
 }
 
-/* Eyebrow — AEM 6.5: .eyebrow-lg-desktop, 18px attAleckSans-Regular */
+/* Eyebrow */
+
 .hero .hero-eyebrow {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-s);
@@ -73,7 +116,8 @@
   line-height: 1.4;
 }
 
-/* Heading — AEM 6.5: h2, 38px attAleckSans-Bold */
+/* Heading */
+
 .hero .hero-heading {
   font-family: var(--heading-font-family);
   font-size: var(--heading-font-size-xl);
@@ -83,7 +127,8 @@
   line-height: 1.15;
 }
 
-/* Description — AEM 6.5: .wysiwyg-editor p, 17px attAleckSans-Regular */
+/* Description */
+
 .hero .hero-description {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-xs);
@@ -93,7 +138,8 @@
   line-height: 1.4;
 }
 
-/* Legal/disclaimer text — AEM 6.5: .type-legal-wysiwyg-editor, 12px */
+/* Legal/disclaimer text */
+
 .hero .hero-legal {
   font-family: var(--body-font-family);
   font-size: 12px;
@@ -104,6 +150,7 @@
 }
 
 /* CTAs */
+
 .hero .button-container {
   margin: 0 0 12px;
 }
@@ -147,7 +194,8 @@
   text-decoration: none;
 }
 
-/* ===== Desktop layout (>= 900px) ===== */
+/* Desktop layout */
+
 @media (width >= 900px) {
   .hero {
     min-height: 500px;
@@ -158,13 +206,11 @@
     align-items: stretch;
   }
 
-  /* Content takes left half by default */
   .hero .hero-content {
     width: 50%;
     padding: 60px 40px 60px 48px;
   }
 
-  /* Media fills right half */
   .hero .hero-media {
     width: 50%;
     min-height: unset;
@@ -191,16 +237,16 @@
   }
 }
 
-/* ===== Large desktop (>= 1200px) ===== */
+/* Large desktop */
+
 @media (width >= 1200px) {
   .hero .hero-content {
     padding: 80px 48px 80px 64px;
   }
 }
 
-/* ===== Layout Variants ===== */
+/* Content Right */
 
-/* Content Right — swap column order */
 .hero.content-right .hero-inner {
   flex-direction: column-reverse;
 }
@@ -221,7 +267,8 @@
   }
 }
 
-/* Content Center — full-width background image, centered overlay */
+/* Content Center */
+
 .hero.content-center {
   text-align: center;
   align-items: center;
@@ -265,19 +312,20 @@
   }
 }
 
-/* ===== Theme Variants ===== */
+/* Light with Background Image (default) */
 
-/* Light with Background Image (default) — dark text on light bg */
 .hero.light-bg-img {
   background-color: var(--background-color, #fff);
 }
 
-/* Light variant (no background image) */
+/* Light */
+
 .hero.light {
   background-color: var(--light-color, #f8f8f8);
 }
 
-/* Dark variants — shared inverse text and CTA styles */
+/* Dark variants */
+
 .hero.dark-bg-img,
 .hero.dark {
   background-color: var(--dark-color, #25303a);
