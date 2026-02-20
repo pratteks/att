@@ -6,15 +6,17 @@ import { moveInstrumentation } from '../../../scripts/scripts.js';
  * AEM 6.5 Component Mapping:
  *   pricingCard (sling:resourceType = att/components/content/pricingCard)
  *   Equivalent AEM 6.5 dialog fields:
- *     - planName   → ./jcr:title (textfield)
- *     - price      → ./price (textfield, e.g. "$20")
- *     - pricePer   → ./pricePer (textfield, e.g. "/mo.")
- *     - priceNote  → ./priceNote (textfield, e.g. "per line for 36 mos")
- *     - features   → ./features (richtext, expected as <ul>)
- *     - ctaLink    → ./linkURL (pathfield)
- *     - ctaText    → ./linkText (textfield)
- *     - legalText  → ./legalText (textarea)
- *     - featured   → ./featured (checkbox, highlights the card)
+ *     - planName       → ./jcr:title (textfield)
+ *     - pricePrefix    → ./pricePrefix (textfield, e.g. "Solutions start at")
+ *     - price          → ./price (textfield, e.g. "$20")
+ *     - pricePer       → ./pricePer (textfield, e.g. "/mo.")
+ *     - priceQualifier → ./priceQualifier (textfield, e.g. "per line for 36 mos")
+ *     - priceNote      → ./priceNote (textfield, additional note text)
+ *     - features       → ./features (richtext, expected as <ul>)
+ *     - ctaLink        → ./linkURL (pathfield)
+ *     - ctaText        → ./linkText (textfield)
+ *     - legalText      → ./legalText (textarea)
+ *     - featured       → ./featured (checkbox, highlights the card)
  */
 function decorateBattPricing(block) {
   const rows = [...block.children];

@@ -50,6 +50,35 @@
           "description": "Server endpoint for form submission"
         },
         {
+          "component": "text",
+          "valueType": "string",
+          "name": "eloquaFormName",
+          "label": "Eloqua Form Name",
+          "description": "Eloqua form name for marketing integration (e.g., 'ATTBusinessForm')"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "campaignId",
+          "label": "Campaign ID",
+          "description": "Campaign tracking ID for lead attribution"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "redirectUrl",
+          "label": "Redirect URL",
+          "description": "Post-submission redirect URL (overrides inline thank-you message)"
+        },
+        {
+          "component": "richtext",
+          "name": "thankYouMessage",
+          "value": "",
+          "label": "Thank You Message",
+          "valueType": "string",
+          "description": "Confirmation message shown after successful submission"
+        },
+        {
           "component": "richtext",
           "name": "privacyText",
           "value": "",

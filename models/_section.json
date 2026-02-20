@@ -33,7 +33,11 @@
             { "name": "Highlight", "value": "highlight" },
             { "name": "Dark", "value": "dark" },
             { "name": "Light", "value": "light" },
-            { "name": "Full Width", "value": "full-width" }
+            { "name": "Full Width", "value": "full-width" },
+            { "name": "Accent Background", "value": "accent-bg" },
+            { "name": "Neutral Background", "value": "neutral-bg" },
+            { "name": "Dark with Background Image", "value": "dark-bg-img" },
+            { "name": "Light with Background Image", "value": "light-bg-img" }
           ]
         }
       ]

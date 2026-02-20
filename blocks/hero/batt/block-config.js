@@ -13,8 +13,11 @@ import { moveInstrumentation } from '../../../scripts/scripts.js';
  *   Row 2 (image)     → cell: <picture> → .hero-media
  *   Row 3 (imageAlt)  → cell: alt text string (consumed by img)
  *
- * panelLayout → classes: content-left | content-right | content-center
- * theme       → classes: light-bg-img | dark-bg-img | light | dark
+ * panelLayout → classes: content-left | content-right | content-center | reverse
+ * theme       → classes: light-bg-img | dark-bg-img | light | dark | with-video
+ *
+ * Additional AEM 6.5 dialog fields:
+ *   - videoUrl  → ./videoURL (textfield, optional hero video)
  */
 function decorateBattHero(block) {
   const rows = [...block.children];

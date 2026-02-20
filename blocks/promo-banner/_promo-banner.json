@@ -49,6 +49,14 @@
           "label": "Image Alt Text"
         },
         {
+          "component": "richtext",
+          "name": "legalText",
+          "value": "",
+          "label": "Legal Text",
+          "valueType": "string",
+          "description": "Fine print / disclaimers below the CTA buttons"
+        },
+        {
           "component": "multiselect",
           "name": "classes",
           "label": "Style",

@@ -61,6 +61,13 @@
         {
           "component": "text",
           "valueType": "string",
+          "name": "pricePrefix",
+          "label": "Price Prefix",
+          "description": "Text displayed above the price (e.g., 'Solutions start at')"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
           "name": "price",
           "label": "Price",
           "description": "Price amount (e.g., '$20/mo.')"
@@ -68,9 +75,16 @@
         {
           "component": "text",
           "valueType": "string",
+          "name": "priceQualifier",
+          "label": "Price Qualifier",
+          "description": "Qualifier below price amount (e.g., 'per line for 36 mos')"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
           "name": "priceNote",
           "label": "Price Note",
-          "description": "Qualifier text below the price (e.g., 'per line for 36 mos')"
+          "description": "Additional note text below qualifier"
         },
         {
           "component": "richtext",

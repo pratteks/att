@@ -148,6 +148,22 @@
           {
             "name": "Full Width",
             "value": "full-width"
+          },
+          {
+            "name": "Accent Background",
+            "value": "accent-bg"
+          },
+          {
+            "name": "Neutral Background",
+            "value": "neutral-bg"
+          },
+          {
+            "name": "Dark with Background Image",
+            "value": "dark-bg-img"
+          },
+          {
+            "name": "Light with Background Image",
+            "value": "light-bg-img"
           }
         ]
       }
@@ -312,6 +328,34 @@
         "label": "Text",
         "valueType": "string",
         "description": "Breadcrumb links as a list"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Tall Cards",
+            "value": "tall"
+          },
+          {
+            "name": "Zoom on Hover",
+            "value": "zoom-on-hover"
+          },
+          {
+            "name": "Icon Cards",
+            "value": "icon-cards"
+          },
+          {
+            "name": "Stat Cards",
+            "value": "stat-cards"
+          }
+        ]
       }
     ]
   },
@@ -523,6 +567,35 @@
         "description": "Server endpoint for form submission"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "eloquaFormName",
+        "label": "Eloqua Form Name",
+        "description": "Eloqua form name for marketing integration (e.g., 'ATTBusinessForm')"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "campaignId",
+        "label": "Campaign ID",
+        "description": "Campaign tracking ID for lead attribution"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "redirectUrl",
+        "label": "Redirect URL",
+        "description": "Post-submission redirect URL (overrides inline thank-you message)"
+      },
+      {
+        "component": "richtext",
+        "name": "thankYouMessage",
+        "value": "",
+        "label": "Thank You Message",
+        "valueType": "string",
+        "description": "Confirmation message shown after successful submission"
+      },
+      {
         "component": "richtext",
         "name": "privacyText",
         "value": "",
@@ -597,6 +670,13 @@
         "value": ""
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "videoUrl",
+        "label": "Video URL",
+        "description": "Optional video URL displayed in the hero media area"
+      },
+      {
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
@@ -629,6 +709,14 @@
           {
             "name": "Dark",
             "value": "dark"
+          },
+          {
+            "name": "Reverse Layout",
+            "value": "reverse"
+          },
+          {
+            "name": "With Video",
+            "value": "with-video"
           }
         ]
       }
@@ -755,6 +843,13 @@
       {
         "component": "text",
         "valueType": "string",
+        "name": "pricePrefix",
+        "label": "Price Prefix",
+        "description": "Text displayed above the price (e.g., 'Solutions start at')"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
         "name": "price",
         "label": "Price",
         "description": "Price amount (e.g., '$20/mo.')"
@@ -762,9 +857,16 @@
       {
         "component": "text",
         "valueType": "string",
+        "name": "priceQualifier",
+        "label": "Price Qualifier",
+        "description": "Qualifier below price amount (e.g., 'per line for 36 mos')"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
         "name": "priceNote",
         "label": "Price Note",
-        "description": "Qualifier text below the price (e.g., 'per line for 36 mos')"
+        "description": "Additional note text below qualifier"
       },
       {
         "component": "richtext",
@@ -821,6 +923,14 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Image Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "legalText",
+        "value": "",
+        "label": "Legal Text",
+        "valueType": "string",
+        "description": "Fine print / disclaimers below the CTA buttons"
       },
       {
         "component": "multiselect",

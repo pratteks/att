@@ -12,8 +12,19 @@
  *     - submitLabel   → ./submitLabel (textfield, default "Submit")
  *     - actionURL     → ./actionURL (textfield / pathfield)
  *     - privacyText   → ./privacyText (richtext)
- *     - optInCheckbox → ./optInLabel (textfield)
- *     - successMsg    → ./thankYouMessage (richtext)
+ *     - optInCheckbox  → ./optInLabel (textfield)
+ *     - successMsg     → ./thankYouMessage (richtext)
+ *     - eloquaFormName → ./elqFormName (textfield, Eloqua integration)
+ *     - campaignId     → ./campaignID (textfield, lead attribution)
+ *     - redirectUrl    → ./redirectURL (pathfield, post-submit redirect)
+ *     - solutionOfInterest → ./solutionOfInterest (select, pre-selected product)
+ *
+ *   Field validation from live site:
+ *     - firstName: maxlength=40
+ *     - lastName:  maxlength=40
+ *     - email:     maxlength=255
+ *     - phone:     maxlength=28
+ *     - company:   maxlength=100
  */
 
 function toKebab(str) {

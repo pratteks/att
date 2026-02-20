@@ -16,6 +16,8 @@
  *     - linkURL     → ./linkURL (pathfield)
  *     - linkText    → ./linkText (textfield)
  *     - cardStyle   → ./cardStyle (select: default | icon | stat | featured)
+ *     - cardHeight  → ./cardHeight (select: auto | tall) — controls card-height-tall-* classes
+ *     - hoverEffect → ./hoverEffect (checkbox) — enables zoom-on-hover / zoomable effect
  */
 function decorateBattCards(block) {
   const items = block.querySelectorAll('li');

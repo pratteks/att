@@ -99,13 +99,18 @@ Grid of content cards. Detects icon-style cards (images ≤ 100×100px) and clas
 | Link URL | `./linkURL` | `text` | richtext |
 | Link Text | `./linkText` | `text` | richtext |
 | Card Style | `./cardStyle` | — | select |
+| Card Height | `./cardHeight` | `classes` | select |
+| Hover Effect | `./hoverEffect` | `classes` | checkbox |
 
 **UE Model Fields:**
 
 | Field | Type | Label |
 |-------|------|-------|
+| `classes` (cards) | multiselect | Style |
 | `image` (card) | reference | Image |
 | `text` (card) | richtext | Text |
+
+**Style Variants:** `tall`, `zoom-on-hover`, `icon-cards`, `stat-cards`
 
 ---
 
@@ -220,9 +225,14 @@ Builds a complete HTML form from block rows. Auto-detects field types from label
 | Fields | `./fields` | rows | multifield |
 | Submit Label | `./submitLabel` | `submitLabel` | text |
 | Action URL | `./actionURL` | `actionUrl` | text |
+| Eloqua Form Name | `./elqFormName` | `eloquaFormName` | text |
+| Campaign ID | `./campaignID` | `campaignId` | text |
+| Redirect URL | `./redirectURL` | `redirectUrl` | text |
 | Privacy Text | `./privacyText` | `privacyText` | richtext |
 | Opt-In | `./optInLabel` | — | text |
-| Success Message | `./thankYouMessage` | — | richtext |
+| Success Message | `./thankYouMessage` | `thankYouMessage` | richtext |
+
+**Field Validation (from live site):** firstName: maxlength=40, lastName: maxlength=40, email: maxlength=255, phone: maxlength=28, company: maxlength=100
 
 **UE Model Fields:**
 
@@ -232,6 +242,10 @@ Builds a complete HTML form from block rows. Auto-detects field types from label
 | `formDescription` | richtext | Description |
 | `submitLabel` | text | Submit Button Text |
 | `actionUrl` | text | Form Action URL |
+| `eloquaFormName` | text | Eloqua Form Name |
+| `campaignId` | text | Campaign ID |
+| `redirectUrl` | text | Redirect URL |
+| `thankYouMessage` | richtext | Thank You Message |
 | `privacyText` | richtext | Privacy Text |
 | `classes` | multiselect | Style |
 
@@ -263,9 +277,10 @@ Split-panel hero with content (eyebrow, heading, CTAs) and media (background ima
 | `text` | richtext | Text |
 | `image` | reference | Background Image |
 | `imageAlt` | text | Image Alt Text |
+| `videoUrl` | text | Video URL |
 | `classes` | multiselect | Style |
 
-**Style Variants:** `content-left`, `content-right`, `content-center`, `light-bg-img`, `dark-bg-img`, `light`, `dark`
+**Style Variants:** `content-left`, `content-right`, `content-center`, `light-bg-img`, `dark-bg-img`, `light`, `dark`, `reverse`, `with-video`
 
 ---
 
@@ -327,8 +342,10 @@ Plan comparison cards with price parsing (`$XX/mo.`), feature lists, CTAs, and l
 | AEM 6.5 Field | JCR Path | EDS Field | Type |
 |---------------|----------|-----------|------|
 | Plan Name | `./jcr:title` | `planName` | text |
+| Price Prefix | `./pricePrefix` | `pricePrefix` | text |
 | Price | `./price` | `price` | text |
 | Price Per | `./pricePer` | `price` | text |
+| Price Qualifier | `./priceQualifier` | `priceQualifier` | text |
 | Price Note | `./priceNote` | `priceNote` | text |
 | Features | `./features` | `features` | richtext |
 | CTA Link | `./linkURL` | `cta` | richtext |
@@ -342,7 +359,9 @@ Plan comparison cards with price parsing (`$XX/mo.`), feature lists, CTAs, and l
 |-------|------|-------|
 | `classes` | multiselect | Style |
 | `planName` (pricing-card) | text | Plan Name |
+| `pricePrefix` (pricing-card) | text | Price Prefix |
 | `price` (pricing-card) | text | Price |
+| `priceQualifier` (pricing-card) | text | Price Qualifier |
 | `priceNote` (pricing-card) | text | Price Note |
 | `features` (pricing-card) | richtext | Features |
 | `cta` (pricing-card) | richtext | CTA |
@@ -378,6 +397,7 @@ Promotional banner with content + media split layout. Classifies eyebrow, headin
 | `text` | richtext | Text |
 | `image` | reference | Image |
 | `imageAlt` | text | Image Alt Text |
+| `legalText` | richtext | Legal Text |
 | `classes` | multiselect | Style |
 
 **Style Variants:** `content-left`, `content-right`, `full-width`, `dark`, `light`, `with-icon-list`
@@ -597,6 +617,10 @@ Blocks are placed inside sections. Available section styles:
 | Dark | `dark` | Dark background with light text |
 | Light | `light` | Light background |
 | Full Width | `full-width` | Edge-to-edge layout |
+| Accent Background | `accent-bg` | Brand accent color background (AT&T blue) |
+| Neutral Background | `neutral-bg` | Neutral gray background |
+| Dark with Background Image | `dark-bg-img` | Dark overlay with background image |
+| Light with Background Image | `light-bg-img` | Light overlay with background image |
 
 ## Adding a New Brand
 

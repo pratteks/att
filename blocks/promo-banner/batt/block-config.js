@@ -18,6 +18,7 @@ import { moveInstrumentation } from '../../../scripts/scripts.js';
  *     - ctaText2    → ./linkText2 (textfield)
  *     - bgColor     → ./backgroundColor (colorpicker / select)
  *     - layout      → ./layout (select: left | right | full-width)
+ *     - legalText   → ./legalText (richtext, fine print below CTAs)
  */
 function decorateBattPromoBanner(block) {
   const rows = [...block.children];
