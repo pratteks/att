@@ -565,6 +565,28 @@ Blockquote for testimonials, awards, or highlighted text. Supports centered, dar
 
 **Style Variants:** `testimonial`, `award`, `centered`, `dark`
 
+## Site Coverage by Page Category
+
+Block inventory derived from exhaustive sitemap analysis (867 URLs across business.att.com).
+
+| Category | Pages | Blocks Used |
+|----------|-------|-------------|
+| Homepage | 1 | hero, cards, carousel, promo-banner, icon-list, link-list, contact |
+| Products | ~120 | hero, icon-list, carousel, accordion, promo-banner, cards, form, contact |
+| Industries | ~30 | breadcrumb, anchor-nav, hero, cards, carousel, promo-banner, contact, form |
+| Areas | ~70 | breadcrumb, hero, cards, accordion, columns |
+| Learn / Articles | ~250 | article, quote, form |
+| Customer Stories | ~150 | breadcrumb, anchor-nav, hero, cards, carousel, promo-banner, contact |
+| Support | ~5 | breadcrumb, accordion, cards, columns |
+| Pricing / Offers | ~20 | pricing, table-comparison, countdown-timer, promo-banner |
+| Partners | ~60 | hero, cards, carousel, contact, form |
+| Portfolios / Categories | ~30 | hero, tabs, cards, icon-list, promo-banner, video |
+| Business Solutions | ~7 | hero, columns, cards, promo-banner |
+| Resources / Collateral | ~50+ | cards, link-list, promo-banner |
+| Legal / Other | ~10 | columns (default content) |
+
+All page categories are covered by the 20-block inventory. Blocks not listed above (fragment, table-comparison, countdown-timer, video, pricing, tabs) appear selectively on specific pages within the categories shown.
+
 ## Section Styles
 
 Blocks are placed inside sections. Available section styles:
