@@ -15,6 +15,7 @@ import { moveInstrumentation } from '../../../scripts/scripts.js';
  *
  * panelLayout → classes: content-left | content-right | content-center | reverse
  * theme       → classes: light-bg-img | dark-bg-img | light | dark | with-video
+ * spacing     → classes: compact | spacious | no-top-padding | full-bleed
  *
  * Additional AEM 6.5 dialog fields:
  *   - videoUrl  → ./videoURL (textfield, optional hero video)

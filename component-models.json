@@ -717,6 +717,22 @@
           {
             "name": "With Video",
             "value": "with-video"
+          },
+          {
+            "name": "Compact",
+            "value": "compact"
+          },
+          {
+            "name": "Spacious",
+            "value": "spacious"
+          },
+          {
+            "name": "No Top Padding",
+            "value": "no-top-padding"
+          },
+          {
+            "name": "Full Bleed",
+            "value": "full-bleed"
           }
         ]
       }

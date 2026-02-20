@@ -280,7 +280,23 @@ Split-panel hero with content (eyebrow, heading, CTAs) and media (background ima
 | `videoUrl` | text | Video URL |
 | `classes` | multiselect | Style |
 
-**Style Variants:** `content-left`, `content-right`, `content-center`, `light-bg-img`, `dark-bg-img`, `light`, `dark`, `reverse`, `with-video`
+**Style Variants:**
+
+| Category | Variants | Description |
+|----------|----------|-------------|
+| Layout | `content-left`, `content-right`, `content-center`, `reverse` | Controls content/media panel positioning |
+| Theme | `light-bg-img`, `dark-bg-img`, `light`, `dark` | Color scheme and background treatment |
+| Media | `with-video` | Enables video in hero media area |
+| Spacing | `compact`, `spacious`, `no-top-padding`, `full-bleed` | Controls padding and margin |
+
+**Spacing variant CSS mapping:**
+
+| Variant | Mobile | Desktop | Effect |
+|---------|--------|---------|--------|
+| `compact` | `padding-block: var(--spacing-m)` | `padding-block: var(--spacing-l)` | Reduced vertical padding |
+| `spacious` | `padding-block: var(--spacing-xxxl)` | `padding-block: var(--spacing-xxxxl)` | Extra vertical padding |
+| `no-top-padding` | `padding-top: 0` | `padding-top: 0` | Removes top spacing (hero directly below nav) |
+| `full-bleed` | `margin-inline: 0; padding-inline: 0` | same | Edge-to-edge, zero horizontal spacing |
 
 ---
 

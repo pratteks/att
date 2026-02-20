@@ -30,8 +30,34 @@
   height: 100%;
 }
 
+/* Spacing variants */
+.hero.compact {
+  padding-block: var(--spacing-m, 16px);
+}
+
+.hero.spacious {
+  padding-block: var(--spacing-xxxl, 80px);
+}
+
+.hero.no-top-padding {
+  padding-top: 0;
+}
+
+.hero.full-bleed {
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+
+  .hero.compact {
+    padding-block: var(--spacing-l, 24px);
+  }
+
+  .hero.spacious {
+    padding-block: var(--spacing-xxxxl, 120px);
   }
 }
