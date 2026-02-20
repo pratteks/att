@@ -32,8 +32,10 @@
   --link-color: #0568ae;             /* FirstNet blue */
   --link-color-alt: #0057b8;         /* Darker blue — nav links */
   --link-hover-color: #044f85;       /* Link hover */
+  --error-color: #f00;               /* Validation / error red */
   --footer-text-color: #000;
   --overlay-bg: rgba(0, 0, 0, 0.7);  /* Modal / overlay background */
+  --overlay-bg-heavy: rgba(0, 0, 0, 0.9); /* Mobile nav / heavy overlay */
   --border-color: #e3e3e3;           /* General border, divider */
 
   /* =============================================

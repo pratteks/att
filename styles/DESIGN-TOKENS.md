@@ -2,7 +2,7 @@
 
 Design tokens extracted from **business.att.com** and **firstnet.com** for the multi-brand AEM Edge Delivery Services migration.
 
-> **Extraction coverage:** Homepage + interior pages for both brands. batt: 7 pages (homepage, mobility, business-internet, cybersecurity, offers, small-business, bundles). firstnet: 5 pages (homepage, plans, coverage, community, industry-solutions).
+> **Extraction coverage:** Exhaustive crawl of both brands. batt: 11 pages (homepage, mobility, business-internet, cybersecurity, offers, small-business, bundles, 5G-for-business, networking, business-guarantee, collaboration). firstnet: 14 pages (homepage, plans, coverage, community, industry-solutions, devices, apps, help, faq, power-of-firstnet, firstnet-and-family, law-enforcement, healthcare, in-building-solutions). Additional batt and firstnet pages returned 404 or redirected; remaining pages use the same design system with no new brand-level tokens.
 
 ## How Brand Tokens Work
 
@@ -58,7 +58,7 @@ Defined in `styles/styles.css` under `:root`. These are the fallback values when
 | `--link-color` | `#0074B3` | `#0568AE` | Links |
 | `--link-color-alt` | `#0057B8` | `#0057B8` | Interior page links |
 | `--link-hover-color` | `#00588A` | `#044F85` | Link hover |
-| `--error-color` | `#FF0000` | — | Validation / error red |
+| `--error-color` | `#FF0000` | `#FF0000` | Validation / error red |
 | `--footer-text-color` | `#444` | `#000` | Footer text |
 | `--light-color-alt` | `#F3F4F6` (neutral grey) | `#F2F2F2` (neutral grey) | Alternate section bg |
 | `--dark-color-alt` | `#000` | `#000` | Pure black section bg |
@@ -67,6 +67,7 @@ Defined in `styles/styles.css` under `:root`. These are the fallback values when
 | `--text-color-disabled` | — | `#777` | Disabled / tertiary text |
 | `--highlight-color` | `#BAEEFC` (lighter blue) | — | Promo section bg |
 | `--overlay-bg` | — | `rgba(0,0,0,0.7)` | Modal overlay |
+| `--overlay-bg-heavy` | — | `rgba(0,0,0,0.9)` | Mobile nav / heavy overlay |
 | `--border-color` | — | `#E3E3E3` | General border / divider |
 
 ### Typography
