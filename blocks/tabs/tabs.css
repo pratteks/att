@@ -1,0 +1,43 @@
+/* Tabs — Base styles */
+.tabs {
+  width: 100%;
+}
+
+.tabs .tabs-list {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 2px solid #e3e3e3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0;
+}
+
+.tabs .tabs-list button {
+  padding: 12px 24px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.tabs .tabs-list button:hover {
+  border-bottom-color: currentcolor;
+}
+
+.tabs .tabs-list button[aria-selected="true"] {
+  font-weight: 700;
+}
+
+.tabs .tabs-panel {
+  display: none;
+  padding: 24px 0;
+}
+
+.tabs .tabs-panel.active {
+  display: block;
+}

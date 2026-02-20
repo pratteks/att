@@ -1,0 +1,31 @@
+/* Table Comparison — Base styles */
+.table-comparison {
+  width: 100%;
+  overflow-x: auto;
+}
+.table-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+.table-comparison th,
+.table-comparison td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e3e3e3;
+}
+.table-comparison thead th {
+  font-weight: 700;
+  border-bottom: 2px solid currentcolor;
+}
+.table-comparison tbody tr:last-child td {
+  border-bottom: none;
+}
+.table-comparison .check-icon::before {
+  content: '✓';
+}
+.table-comparison .cross-icon::before {
+  content: '✗';
+}
+/* FirstNet Table Comparison — brand overrides go here */

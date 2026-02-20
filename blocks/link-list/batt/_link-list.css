@@ -1,0 +1,36 @@
+@import url('../link-list.css');
+
+/* BATT Link List brand overrides */
+.link-list .link-list-heading {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.link-list .link-list-column a {
+  font-size: var(--body-font-size-s);
+  color: var(--link-color);
+}
+
+.link-list .link-list-column a:hover {
+  color: var(--link-hover-color);
+}
+
+.link-list.dark {
+  background: var(--dark-color);
+  padding: 40px 24px;
+  border-radius: 0;
+}
+
+.link-list.dark .link-list-heading {
+  color: #fff;
+}
+
+.link-list.dark .link-list-column a {
+  color: rgb(255 255 255 / 80%);
+}
+
+.link-list.dark .link-list-column a:hover {
+  color: #fff;
+}

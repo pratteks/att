@@ -1,0 +1,49 @@
+/* Accordion — Base styles */
+.accordion {
+  width: 100%;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.accordion .accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.accordion .accordion-trigger::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.accordion .accordion-item.active .accordion-trigger::after {
+  content: '−';
+}
+
+.accordion .accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion .accordion-item.active .accordion-panel {
+  max-height: 2000px;
+}
+
+.accordion .accordion-panel-content {
+  padding: 0 0 20px;
+}

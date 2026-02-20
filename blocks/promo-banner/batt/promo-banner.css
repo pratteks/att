@@ -1,0 +1,102 @@
+/* Promo Banner — Base styles */
+.promo-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.promo-banner .promo-banner-content {
+  padding: 40px 24px;
+}
+.promo-banner .promo-banner-media {
+  width: 100%;
+}
+.promo-banner .promo-banner-media picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (width >= 900px) {
+  .promo-banner .promo-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .promo-banner .promo-banner-content,
+  .promo-banner .promo-banner-media {
+    flex: 1;
+  }
+}
+/* BATT Promo Banner brand overrides */
+.promo-banner .promo-banner-eyebrow {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.promo-banner .promo-banner-heading {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 16px;
+}
+.promo-banner .promo-banner-description {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+.promo-banner .promo-banner-cta-primary {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+}
+.promo-banner .promo-banner-cta-primary:hover {
+  background: var(--button-hover-bg);
+}
+.promo-banner .promo-banner-cta-secondary {
+  background: transparent;
+  color: var(--brand-primary);
+  border: var(--button-outline-border);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+}
+.promo-banner .promo-banner-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.promo-banner .promo-banner-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+}
+.promo-banner .promo-banner-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+.promo-banner.dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+.promo-banner.dark .promo-banner-heading,
+.promo-banner.dark .promo-banner-description,
+.promo-banner.dark .promo-banner-eyebrow {
+  color: #fff;
+}
+@media (width >= 900px) {
+  .promo-banner .promo-banner-heading {
+    font-size: var(--heading-font-size-xl);
+  }
+}

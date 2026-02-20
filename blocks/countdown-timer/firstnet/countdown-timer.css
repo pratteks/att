@@ -1,0 +1,33 @@
+/* Countdown Timer — Base styles */
+.countdown-timer {
+  width: 100%;
+  text-align: center;
+}
+.countdown-timer .countdown-units {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+.countdown-timer .countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+.countdown-timer .countdown-value {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+.countdown-timer .countdown-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.countdown-timer .countdown-separator {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+/* FirstNet Countdown Timer — brand overrides go here */

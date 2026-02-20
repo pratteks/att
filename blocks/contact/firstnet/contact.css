@@ -1,0 +1,21 @@
+/* Contact — Base styles */
+.contact {
+  width: 100%;
+}
+.contact .contact-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contact .contact-info {
+  flex: 1;
+}
+.contact .contact-form-wrapper {
+  flex: 1;
+}
+@media (width >= 900px) {
+  .contact .contact-inner {
+    flex-direction: row;
+  }
+}
+/* FirstNet Contact — brand overrides go here */

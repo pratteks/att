@@ -1,0 +1,17 @@
+@import url('../video.css');
+
+/* BATT Video brand overrides */
+.video .video-placeholder {
+  border-radius: 12px;
+}
+
+.video .video-play-btn {
+  background: rgb(0 56 143 / 80%);
+  border-color: #fff;
+}
+
+.video .video-caption {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+}

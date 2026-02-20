@@ -1,0 +1,71 @@
+@import url('../carousel.css');
+
+/* BATT Carousel brand overrides */
+.carousel .carousel-slide-body {
+  padding: 24px;
+}
+
+.carousel .carousel-slide-heading {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 8px;
+}
+
+.carousel .carousel-slide-description {
+  font-size: var(--body-font-size-m);
+  color: var(--text-color);
+  line-height: var(--body-line-height);
+  margin-bottom: 16px;
+}
+
+.carousel .carousel-slide-cta .button {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--button-transition);
+}
+
+.carousel .carousel-slide-cta .button:hover {
+  background: var(--button-hover-bg);
+}
+
+.carousel .carousel-arrow {
+  border: var(--button-nav-border);
+  border-radius: var(--button-nav-border-radius);
+  color: var(--brand-primary);
+  background: rgb(255 255 255 / 90%);
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+}
+
+.carousel .carousel-nav button {
+  border-color: var(--brand-primary);
+  width: 10px;
+  height: 10px;
+}
+
+.carousel .carousel-nav button.active {
+  background: var(--brand-primary);
+}
+
+.carousel .carousel-slide-image picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (width >= 900px) {
+  .carousel .carousel-slide {
+    padding: 0 12px;
+  }
+}

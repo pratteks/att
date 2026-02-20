@@ -1,0 +1,73 @@
+/* Countdown Timer — Base styles */
+.countdown-timer {
+  width: 100%;
+  text-align: center;
+}
+.countdown-timer .countdown-units {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+.countdown-timer .countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+.countdown-timer .countdown-value {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+.countdown-timer .countdown-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.countdown-timer .countdown-separator {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+/* BATT Countdown Timer brand overrides */
+.countdown-timer .countdown-pre-text {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  color: var(--text-color);
+}
+.countdown-timer .countdown-value {
+  font-family: var(--body-font-family);
+  color: var(--brand-primary);
+}
+.countdown-timer .countdown-label {
+  font-family: var(--body-font-family);
+  color: var(--text-color-secondary);
+  font-size: var(--body-font-size-xs);
+}
+.countdown-timer.compact .countdown-units {
+  gap: 8px;
+}
+.countdown-timer.compact .countdown-value {
+  font-size: 24px;
+}
+.countdown-timer.dark {
+  background: var(--dark-color);
+  color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+.countdown-timer.dark .countdown-value {
+  color: #fff;
+}
+.countdown-timer.dark .countdown-label,
+.countdown-timer.dark .countdown-pre-text {
+  color: rgb(255 255 255 / 80%);
+}
+.countdown-timer.inline {
+  text-align: left;
+}
+.countdown-timer.inline .countdown-units {
+  justify-content: flex-start;
+}

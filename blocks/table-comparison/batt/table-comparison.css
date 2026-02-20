@@ -1,0 +1,67 @@
+/* Table Comparison — Base styles */
+.table-comparison {
+  width: 100%;
+  overflow-x: auto;
+}
+.table-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+.table-comparison th,
+.table-comparison td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e3e3e3;
+}
+.table-comparison thead th {
+  font-weight: 700;
+  border-bottom: 2px solid currentcolor;
+}
+.table-comparison tbody tr:last-child td {
+  border-bottom: none;
+}
+.table-comparison .check-icon::before {
+  content: '✓';
+}
+.table-comparison .cross-icon::before {
+  content: '✗';
+}
+/* BATT Table Comparison brand overrides */
+.table-comparison thead th {
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  color: var(--dark-color);
+  border-bottom-color: var(--brand-primary);
+  background: var(--light-color);
+}
+.table-comparison td {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+}
+.table-comparison .highlight {
+  background: var(--brand-accent);
+  color: var(--dark-color);
+}
+.table-comparison .check-icon::before {
+  color: #00a84f;
+  font-weight: 700;
+}
+.table-comparison .cross-icon::before {
+  color: var(--error-color, #f00);
+  font-weight: 700;
+}
+.table-comparison.full-borders th,
+.table-comparison.full-borders td {
+  border: 1px solid var(--border-color, #e3e3e3);
+}
+.table-comparison.striped tbody tr:nth-child(even) {
+  background: var(--light-color);
+}
+.table-comparison.sticky-header thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

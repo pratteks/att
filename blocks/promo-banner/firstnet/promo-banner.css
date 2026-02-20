@@ -1,0 +1,30 @@
+/* Promo Banner — Base styles */
+.promo-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.promo-banner .promo-banner-content {
+  padding: 40px 24px;
+}
+.promo-banner .promo-banner-media {
+  width: 100%;
+}
+.promo-banner .promo-banner-media picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (width >= 900px) {
+  .promo-banner .promo-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .promo-banner .promo-banner-content,
+  .promo-banner .promo-banner-media {
+    flex: 1;
+  }
+}
+/* FirstNet Promo Banner — brand overrides go here */

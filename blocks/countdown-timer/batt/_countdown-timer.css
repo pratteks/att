@@ -1,0 +1,52 @@
+@import url('../countdown-timer.css');
+
+/* BATT Countdown Timer brand overrides */
+.countdown-timer .countdown-pre-text {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.countdown-timer .countdown-value {
+  font-family: var(--body-font-family);
+  color: var(--brand-primary);
+}
+
+.countdown-timer .countdown-label {
+  font-family: var(--body-font-family);
+  color: var(--text-color-secondary);
+  font-size: var(--body-font-size-xs);
+}
+
+.countdown-timer.compact .countdown-units {
+  gap: 8px;
+}
+
+.countdown-timer.compact .countdown-value {
+  font-size: 24px;
+}
+
+.countdown-timer.dark {
+  background: var(--dark-color);
+  color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.countdown-timer.dark .countdown-value {
+  color: #fff;
+}
+
+.countdown-timer.dark .countdown-label,
+.countdown-timer.dark .countdown-pre-text {
+  color: rgb(255 255 255 / 80%);
+}
+
+.countdown-timer.inline {
+  text-align: left;
+}
+
+.countdown-timer.inline .countdown-units {
+  justify-content: flex-start;
+}

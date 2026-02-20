@@ -1,0 +1,68 @@
+/* Carousel — Base styles */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel .carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel .carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.carousel .carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.carousel .carousel-nav button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel .carousel-nav button.active {
+  background: currentcolor;
+}
+
+.carousel .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+  background: rgb(255 255 255 / 90%);
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .carousel-arrow-prev {
+  left: 8px;
+}
+
+.carousel .carousel-arrow-next {
+  right: 8px;
+}
+
+@media (width >= 900px) {
+  .carousel .carousel-slide {
+    flex: 0 0 33.333%;
+  }
+}

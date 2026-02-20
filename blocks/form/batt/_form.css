@@ -1,0 +1,83 @@
+@import url('../form.css');
+
+/* BATT Form brand overrides */
+.form .form-heading {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.form .form-field label {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+}
+
+.form .form-field input,
+.form .form-field select,
+.form .form-field textarea {
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  padding: var(--input-padding);
+  font-size: var(--input-font-size);
+  font-family: var(--body-font-family);
+}
+
+.form .form-field input:focus,
+.form .form-field select:focus,
+.form .form-field textarea:focus {
+  border-color: var(--brand-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(0 56 143 / 20%);
+}
+
+.form .form-submit button {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  border: none;
+  transition: var(--button-transition);
+}
+
+.form .form-submit button:hover {
+  background: var(--button-hover-bg);
+}
+
+.form .form-error {
+  color: var(--error-color, #f00);
+  font-size: var(--body-font-size-xs);
+}
+
+.form .form-privacy {
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-secondary);
+}
+
+.form .form-privacy a {
+  color: var(--link-color);
+}
+
+.form.dark {
+  background: var(--dark-color);
+  color: #fff;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.form.dark .form-heading {
+  color: #fff;
+}
+
+.form.dark .form-field label {
+  color: #fff;
+}
+
+.form.dark .form-submit button {
+  background: #fff;
+  color: var(--brand-primary);
+}

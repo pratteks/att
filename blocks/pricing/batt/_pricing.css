@@ -1,0 +1,68 @@
+@import url('../pricing.css');
+
+/* BATT Pricing brand overrides */
+.pricing .pricing-card {
+  border-color: var(--border-color, #e3e3e3);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.pricing .pricing-card-header {
+  background: var(--light-color);
+}
+
+.pricing .pricing-card-name {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0 0 12px;
+}
+
+.pricing .pricing-card-price {
+  color: var(--brand-primary);
+  font-family: var(--body-font-family);
+}
+
+.pricing .pricing-card-note {
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-secondary);
+}
+
+.pricing .pricing-card-features li {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+  border-color: var(--light-color);
+}
+
+.pricing .pricing-card-cta .button {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+
+.pricing .pricing-card-cta .button:hover {
+  background: var(--button-hover-bg);
+}
+
+.pricing .pricing-card-legal {
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-secondary);
+  margin-top: 8px;
+}
+
+.pricing.featured .pricing-card:nth-child(2) {
+  border: 2px solid var(--brand-primary);
+  transform: scale(1.02);
+}
+
+.pricing.two-col .pricing-cards {
+  grid-template-columns: repeat(2, 1fr);
+}

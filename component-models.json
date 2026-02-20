@@ -136,8 +136,65 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Full Width",
+            "value": "full-width"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "description": "Accordion display variants",
+        "options": [
+          {
+            "name": "Single Open",
+            "value": "single-open"
+          },
+          {
+            "name": "FAQ",
+            "value": "faq"
+          },
+          {
+            "name": "Bordered",
+            "value": "bordered"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "description": "The accordion item heading / question"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "The expandable content / answer"
       }
     ]
   },
@@ -161,6 +218,57 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "description": "Carousel display variants",
+        "options": [
+          {
+            "name": "Auto-play",
+            "value": "auto-play"
+          },
+          {
+            "name": "Single Slide",
+            "value": "single-slide"
+          },
+          {
+            "name": "Testimonials",
+            "value": "testimonials"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Heading, description, and CTA links"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -176,6 +284,157 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "contact",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "info",
+        "value": "",
+        "label": "Contact Info",
+        "valueType": "string",
+        "description": "Heading, description, phone number, and hours"
+      },
+      {
+        "component": "richtext",
+        "name": "formContent",
+        "value": "",
+        "label": "Form Content",
+        "valueType": "string",
+        "description": "Form fields (or reference to form block)"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "With Form",
+            "value": "with-form"
+          },
+          {
+            "name": "Phone Only",
+            "value": "phone-only"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "countdown-timer",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "endDate",
+        "label": "End Date",
+        "description": "Countdown target date (ISO format: YYYY-MM-DDTHH:mm:ss)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "preText",
+        "label": "Pre-Timer Text",
+        "description": "Text before the countdown (e.g., 'Hurry! Offer ends in:')"
+      },
+      {
+        "component": "richtext",
+        "name": "expiredText",
+        "value": "",
+        "label": "Expired Text",
+        "valueType": "string",
+        "description": "Text shown when countdown reaches zero"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Compact",
+            "value": "compact"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Inline",
+            "value": "inline"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "formTitle",
+        "label": "Form Title",
+        "description": "Heading above the form"
+      },
+      {
+        "component": "richtext",
+        "name": "formDescription",
+        "value": "",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Text shown above form fields"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitLabel",
+        "label": "Submit Button Text",
+        "value": "Submit"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "actionUrl",
+        "label": "Form Action URL",
+        "description": "Server endpoint for form submission"
+      },
+      {
+        "component": "richtext",
+        "name": "privacyText",
+        "value": "",
+        "label": "Privacy Text",
+        "valueType": "string",
+        "description": "Privacy disclosure text below the form"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Contact Form",
+            "value": "contact"
+          },
+          {
+            "name": "Newsletter",
+            "value": "newsletter"
+          },
+          {
+            "name": "Lead Generation",
+            "value": "lead-gen"
+          },
+          {
+            "name": "Dark Background",
+            "value": "dark"
+          }
+        ]
       }
     ]
   },
@@ -253,6 +512,362 @@
           {
             "name": "Dark",
             "value": "dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "icon-list",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Horizontal",
+            "value": "horizontal"
+          },
+          {
+            "name": "Large Icons",
+            "value": "large-icons"
+          },
+          {
+            "name": "Checkmarks",
+            "value": "checkmarks"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "icon-list-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "multi": false,
+        "description": "Icon or pictogram image"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Feature text with optional heading"
+      }
+    ]
+  },
+  {
+    "id": "link-list",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "description": "Optional heading above the link columns"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Links",
+        "valueType": "string",
+        "description": "Multiple lists of links. Each <ul> becomes a column."
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Two Columns",
+            "value": "two-col"
+          },
+          {
+            "name": "Three Columns",
+            "value": "three-col"
+          },
+          {
+            "name": "Dark Background",
+            "value": "dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pricing",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Featured",
+            "value": "featured"
+          },
+          {
+            "name": "Compact",
+            "value": "compact"
+          },
+          {
+            "name": "Two Columns",
+            "value": "two-col"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pricing-card",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "planName",
+        "label": "Plan Name",
+        "description": "Name of the pricing plan"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "price",
+        "label": "Price",
+        "description": "Price amount (e.g., '$20/mo.')"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "priceNote",
+        "label": "Price Note",
+        "description": "Qualifier text below the price (e.g., 'per line for 36 mos')"
+      },
+      {
+        "component": "richtext",
+        "name": "features",
+        "value": "",
+        "label": "Features",
+        "valueType": "string",
+        "description": "List of plan features"
+      },
+      {
+        "component": "richtext",
+        "name": "cta",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string",
+        "description": "Call-to-action link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "legalText",
+        "label": "Legal Text",
+        "description": "Fine print / disclaimers"
+      }
+    ]
+  },
+  {
+    "id": "promo-banner",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "eyebrow",
+        "label": "Eyebrow",
+        "description": "Small text above the heading"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Heading, description, and CTA links"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Content Left",
+            "value": "content-left"
+          },
+          {
+            "name": "Content Right",
+            "value": "content-right"
+          },
+          {
+            "name": "Full Width",
+            "value": "full-width"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "With Icon List",
+            "value": "with-icon-list"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "table-comparison",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Table Content",
+        "valueType": "string",
+        "description": "Table rows. First row = header. Each row = one comparison feature. Columns = plan/product columns."
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Full Borders",
+            "value": "full-borders"
+          },
+          {
+            "name": "Striped",
+            "value": "striped"
+          },
+          {
+            "name": "Sticky Header",
+            "value": "sticky-header"
+          },
+          {
+            "name": "Highlight Column",
+            "value": "highlight-column"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Pill Tabs",
+            "value": "pill"
+          },
+          {
+            "name": "Vertical",
+            "value": "vertical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Tab Label",
+        "description": "Text shown on the tab button"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Tab Content",
+        "valueType": "string",
+        "description": "The content displayed when this tab is active"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "videoUrl",
+        "label": "Video URL",
+        "description": "YouTube or Vimeo embed URL"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "posterImage",
+        "label": "Poster Image",
+        "multi": false,
+        "description": "Thumbnail shown before video plays"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "posterAlt",
+        "label": "Poster Alt Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "caption",
+        "label": "Caption",
+        "description": "Optional caption below the video"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Modal",
+            "value": "modal"
+          },
+          {
+            "name": "Autoplay",
+            "value": "autoplay"
+          },
+          {
+            "name": "Inline",
+            "value": "inline"
           }
         ]
       }

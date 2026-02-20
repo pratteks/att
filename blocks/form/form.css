@@ -1,0 +1,70 @@
+/* Form — Base styles */
+.form {
+  width: 100%;
+}
+
+.form .form-container {
+  max-width: 600px;
+}
+
+.form .form-heading {
+  margin-bottom: 16px;
+}
+
+.form .form-field {
+  margin-bottom: 16px;
+}
+
+.form .form-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form .form-field input,
+.form .form-field select,
+.form .form-field textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #878c94;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form .form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form .form-field-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.form .form-field-checkbox input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.form .form-submit {
+  margin-top: 20px;
+}
+
+.form .form-submit button {
+  cursor: pointer;
+}
+
+.form .form-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.form .form-privacy {
+  font-size: 12px;
+  margin-top: 16px;
+}

@@ -1,0 +1,79 @@
+/* Accordion — Base styles */
+.accordion {
+  width: 100%;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #e3e3e3;
+}
+.accordion .accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+.accordion .accordion-trigger::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.accordion .accordion-item.active .accordion-trigger::after {
+  content: '−';
+}
+.accordion .accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion .accordion-item.active .accordion-panel {
+  max-height: 2000px;
+}
+.accordion .accordion-panel-content {
+  padding: 0 0 20px;
+}
+/* BATT Accordion brand overrides */
+.accordion .accordion-trigger {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+.accordion .accordion-trigger:hover {
+  color: var(--brand-primary);
+}
+.accordion .accordion-trigger::after {
+  color: var(--brand-primary);
+}
+.accordion .accordion-panel-content {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+  color: var(--text-color);
+}
+.accordion .accordion-panel-content a {
+  color: var(--link-color);
+}
+.accordion .accordion-panel-content a:hover {
+  color: var(--link-hover-color);
+}
+.accordion .accordion-item {
+  border-color: var(--border-color, #e3e3e3);
+}
+.accordion.faq .accordion-trigger {
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+}
+.accordion.bordered .accordion-item {
+  border: 1px solid var(--border-color, #e3e3e3);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 0 20px;
+}

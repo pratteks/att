@@ -1,0 +1,64 @@
+/* Link List — Base styles */
+.link-list {
+  width: 100%;
+}
+.link-list .link-list-heading {
+  margin-bottom: 24px;
+}
+.link-list .link-list-columns {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+.link-list .link-list-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.link-list .link-list-column li {
+  padding: 6px 0;
+}
+.link-list .link-list-column a {
+  text-decoration: none;
+}
+.link-list .link-list-column a:hover {
+  text-decoration: underline;
+}
+@media (width >= 600px) {
+  .link-list .link-list-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width >= 900px) {
+  .link-list .link-list-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* BATT Link List brand overrides */
+.link-list .link-list-heading {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+.link-list .link-list-column a {
+  font-size: var(--body-font-size-s);
+  color: var(--link-color);
+}
+.link-list .link-list-column a:hover {
+  color: var(--link-hover-color);
+}
+.link-list.dark {
+  background: var(--dark-color);
+  padding: 40px 24px;
+  border-radius: 0;
+}
+.link-list.dark .link-list-heading {
+  color: #fff;
+}
+.link-list.dark .link-list-column a {
+  color: rgb(255 255 255 / 80%);
+}
+.link-list.dark .link-list-column a:hover {
+  color: #fff;
+}

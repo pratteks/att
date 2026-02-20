@@ -1,0 +1,48 @@
+@import url('../contact.css');
+
+/* BATT Contact brand overrides */
+.contact .contact-heading {
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 16px;
+}
+
+.contact .contact-description {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.contact .contact-phone {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.contact .contact-phone:hover {
+  text-decoration: underline;
+}
+
+.contact.dark {
+  background: var(--dark-color);
+  padding: 40px 24px;
+}
+
+.contact.dark .contact-heading,
+.contact.dark .contact-description {
+  color: #fff;
+}
+
+.contact.dark .contact-phone {
+  color: var(--brand-accent);
+}
+
+@media (width >= 900px) {
+  .contact .contact-heading {
+    font-size: var(--heading-font-size-xl);
+  }
+}
