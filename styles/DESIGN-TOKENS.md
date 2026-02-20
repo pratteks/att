@@ -2,6 +2,8 @@
 
 Design tokens extracted from **business.att.com** and **firstnet.com** for the multi-brand AEM Edge Delivery Services migration.
 
+> **Extraction coverage:** Homepage + interior pages for both brands. batt: 7 pages (homepage, mobility, business-internet, cybersecurity, offers, small-business, bundles). firstnet: 5 pages (homepage, plans, coverage, community, industry-solutions).
+
 ## How Brand Tokens Work
 
 When a page includes `<meta name="brand" content="batt">`, the runtime (`scripts.js` > `loadBrandThemeCss()`) injects these stylesheets in order:
@@ -54,8 +56,18 @@ Defined in `styles/styles.css` under `:root`. These are the fallback values when
 | `--text-color-secondary` | `#454B52` | `#333` | Subtle text |
 | `--text-color-muted` | `#878C94` | `#878C94` | Placeholders |
 | `--link-color` | `#0074B3` | `#0568AE` | Links |
+| `--link-color-alt` | `#0057B8` | `#0057B8` | Interior page links |
 | `--link-hover-color` | `#00588A` | `#044F85` | Link hover |
+| `--error-color` | `#FF0000` | — | Validation / error red |
 | `--footer-text-color` | `#444` | `#000` | Footer text |
+| `--light-color-alt` | `#F3F4F6` (neutral grey) | `#F2F2F2` (neutral grey) | Alternate section bg |
+| `--dark-color-alt` | `#000` | `#000` | Pure black section bg |
+| `--text-color-emphasis` | `#191919` | — | Emphasized near-black text |
+| `--text-color-subtle` | — | `#5A5A5A` | Subtle descriptions |
+| `--text-color-disabled` | — | `#777` | Disabled / tertiary text |
+| `--highlight-color` | `#BAEEFC` (lighter blue) | — | Promo section bg |
+| `--overlay-bg` | — | `rgba(0,0,0,0.7)` | Modal overlay |
+| `--border-color` | — | `#E3E3E3` | General border / divider |
 
 ### Typography
 
@@ -90,6 +102,16 @@ Defined in `styles/styles.css` under `:root`. These are the fallback values when
 | `--button-secondary-bg` | `#F2FAFD` (light blue) | `transparent` |
 | `--button-secondary-color` | `#00388F` | `#FFF` |
 | `--button-secondary-border` | `none` | `2px solid #FFF` |
+| `--button-outline-border` | `2px solid #00388F` | — |
+| `--button-disabled-bg` | `#DCDFE3` | — |
+| `--button-disabled-color` | `#878C94` | — |
+| `--button-nav-border` | `1px solid #0057B8` | — |
+| `--button-nav-border-radius` | `35px` | — |
+| `--button-lg-font-size` | — | `19px` |
+| `--button-lg-border-radius` | — | `40px` |
+| `--button-lg-padding` | — | `10px 36px` |
+| `--button-form-border` | — | `2px solid #FFF` |
+| `--button-form-border-radius` | — | `5px` |
 
 ### Forms
 
@@ -99,6 +121,15 @@ Defined in `styles/styles.css` under `:root`. These are the fallback values when
 | `--input-border-radius` | `8px` | `2px` |
 | `--input-padding` | `12px 16px` | `13px 16px` |
 | `--input-font-size` | `14px` | `14px` |
+
+### Cards & Components (FirstNet)
+
+| Token | Value | Source |
+|-------|-------|--------|
+| `--card-border` | `1px solid #D2D2D2` | Carousel / card border |
+| `--card-shadow` | `0 0 7px #D2D2D2` | Card box-shadow |
+| `--card-header-bg` | `#009FDB` (brand-accent) | Pricing plan card header |
+| `--card-detail-border` | `1px solid #E5DCDC` | Plan detail card border |
 
 ## Fonts
 

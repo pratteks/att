@@ -21,13 +21,19 @@
   /* Semantic colors */
   --background-color: #fff;
   --light-color: #f2fafd;            /* Light blue tint (replaces generic #f8f8f8) */
+  --light-color-alt: #f3f4f6;        /* Neutral light grey — alternate section bg */
   --dark-color: #1d2329;             /* Near-black — headings */
+  --dark-color-alt: #000;            /* Pure black — dark section bg */
   --text-color: #333;                /* Body text */
   --text-color-secondary: #454b52;   /* Paragraph / subtle text */
   --text-color-muted: #878c94;       /* Placeholder, muted labels */
+  --text-color-emphasis: #191919;    /* Near-black — emphasized text */
   --link-color: #0074b3;             /* AT&T link blue */
+  --link-color-alt: #0057b8;         /* Darker blue — interior page links */
   --link-hover-color: #00588a;       /* Link hover */
+  --error-color: #f00;               /* Validation / error red */
   --footer-text-color: #444;
+  --highlight-color: #baeefc;        /* Lighter blue tint — promo section bg */
 
   /* =============================================
      TYPOGRAPHY
@@ -81,8 +87,16 @@
 
   /* Outline button */
   --button-outline-bg: transparent;
-  --button-outline-color: var(--brand-accent);
-  --button-outline-border: 2px solid var(--brand-accent);
+  --button-outline-color: var(--brand-primary);
+  --button-outline-border: 2px solid var(--brand-primary);
+
+  /* Disabled button */
+  --button-disabled-bg: #dcdfe3;
+  --button-disabled-color: #878c94;
+
+  /* Carousel nav button */
+  --button-nav-border: 1px solid #0057b8;
+  --button-nav-border-radius: 35px;
 
   /* =============================================
      FORMS
