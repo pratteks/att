@@ -1,0 +1,62 @@
+{
+  "definitions": [
+    {
+      "title": "Quote",
+      "id": "quote",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Quote",
+              "model": "quote"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "quote",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string",
+          "description": "Quote text"
+        },
+        {
+          "component": "text",
+          "name": "attribution",
+          "value": "",
+          "label": "Attribution",
+          "valueType": "string",
+          "description": "Source/author name"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false,
+          "description": "Optional logo or author image"
+        },
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            { "name": "Testimonial", "value": "testimonial" },
+            { "name": "Award", "value": "award" },
+            { "name": "Centered", "value": "centered" },
+            { "name": "Dark", "value": "dark" }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

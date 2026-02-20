@@ -1,0 +1,27 @@
+@import url('../article.css');
+
+/* BATT Article brand overrides */
+.article .article-meta {
+  border-bottom-color: var(--color-border, #d2d2d2);
+}
+
+.article .article-author {
+  color: var(--color-text-primary, #333);
+}
+
+.article .article-category {
+  background: var(--color-bg-accent, #e8f0fe);
+  color: var(--link-color);
+}
+
+.article .article-toc {
+  background: var(--color-bg-secondary, #f5f5f5);
+}
+
+.article .article-toc a {
+  color: var(--link-color);
+}
+
+.article .article-footnotes {
+  border-top-color: var(--color-border, #d2d2d2);
+}

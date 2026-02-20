@@ -62,7 +62,11 @@
         "pricing",
         "countdown-timer",
         "link-list",
-        "contact"
+        "contact",
+        "breadcrumb",
+        "anchor-nav",
+        "quote",
+        "article"
       ]
     }
   ]

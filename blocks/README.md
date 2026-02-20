@@ -53,6 +53,10 @@ blocks/{name}/
 | [table-comparison](#table-comparison) | `att/components/content/tableBuilder` | Feature comparison table |
 | [tabs](#tabs) | `att/components/content/tabs` | Tabbed content with ARIA keyboard nav |
 | [video](#video) | `att/components/content/video` | YouTube/Vimeo embed with poster + modal |
+| [anchor-nav](#anchor-nav) | `att/components/content/anchorNav` | In-page jump link navigation |
+| [article](#article) | `att/components/content/articleBody` | Blog/article layout with TOC + meta |
+| [breadcrumb](#breadcrumb) | `att/components/content/breadcrumb` | Navigation breadcrumb trail |
+| [quote](#quote) | `att/components/content/quote` | Blockquote, testimonial, or award banner |
 
 ## Block Details
 
@@ -457,6 +461,109 @@ YouTube/Vimeo embed with poster image, inline playback, and modal mode. Converts
 | `classes` | multiselect | Style |
 
 **Style Variants:** `modal`, `autoplay`, `inline`
+
+---
+
+### Anchor Nav
+
+In-page jump link navigation bar. Supports sticky positioning and active section tracking on scroll.
+
+**AEM 6.5 Mapping** (`att/components/content/anchorNav`):
+
+| AEM 6.5 Field | JCR Path | EDS Field | Type |
+|---------------|----------|-----------|------|
+| Links | `./links` | `text` | richtext (list of anchor links) |
+| Sticky | `./sticky` | `classes` | checkbox |
+
+**UE Model Fields:**
+
+| Field | Type | Label |
+|-------|------|-------|
+| `text` | richtext | Navigation Links |
+| `classes` | multiselect | Style |
+
+**Style Variants:** `sticky`, `centered`, `pill`
+
+---
+
+### Article
+
+Blog/article layout with author byline, read time, table of contents, social sharing, and footnotes. Used across 250+ `/learn/` pages.
+
+**AEM 6.5 Mapping** (`att/components/content/articleBody`):
+
+| AEM 6.5 Field | JCR Path | EDS Field | Type |
+|---------------|----------|-----------|------|
+| Title | `./jcr:title` | heading | text |
+| Author | `./author` | `author` | text |
+| Author Role | `./authorRole` | `authorRole` | text |
+| Publish Date | `./publishDate` | — | datepicker |
+| Read Time | `./readTime` | `readTime` | text |
+| Category | `./category` | `category` | text |
+| Hero Image | `./fileReference` | `image` | reference |
+| Body | `./jcr:description` | `text` | richtext |
+| Related Articles | `./relatedArticles` | — | multifield |
+
+**UE Model Fields:**
+
+| Field | Type | Label |
+|-------|------|-------|
+| `author` | text | Author |
+| `authorRole` | text | Author Role |
+| `readTime` | text | Read Time |
+| `category` | text | Category |
+| `image` | reference | Featured Image |
+| `text` | richtext | Article Body |
+| `classes` | multiselect | Style |
+
+**Style Variants:** `with-toc`, `with-sidebar`, `with-share`
+
+---
+
+### Breadcrumb
+
+Navigation breadcrumb trail showing page hierarchy. Appears on industry, area, support, and customer story pages (~200+ pages).
+
+**AEM 6.5 Mapping** (`att/components/content/breadcrumb`):
+
+| AEM 6.5 Field | JCR Path | EDS Field | Type |
+|---------------|----------|-----------|------|
+| Links | `./links` | `text` | richtext (list of links) |
+| Separator | `./separator` | — | text (default ">") |
+
+**UE Model Fields:**
+
+| Field | Type | Label |
+|-------|------|-------|
+| `text` | richtext | Breadcrumb Links |
+
+**No style variants.**
+
+---
+
+### Quote
+
+Blockquote for testimonials, awards, or highlighted text. Supports centered, dark, and award badge variants.
+
+**AEM 6.5 Mapping** (`att/components/content/quote`):
+
+| AEM 6.5 Field | JCR Path | EDS Field | Type |
+|---------------|----------|-----------|------|
+| Quote Text | `./jcr:description` | `text` | richtext |
+| Attribution | `./attribution` | `attribution` | text |
+| Attribution Role | `./attributionRole` | — | text |
+| Image | `./fileReference` | `image` | reference |
+
+**UE Model Fields:**
+
+| Field | Type | Label |
+|-------|------|-------|
+| `text` | richtext | Quote Text |
+| `attribution` | text | Attribution |
+| `image` | reference | Logo/Author Image |
+| `classes` | multiselect | Style |
+
+**Style Variants:** `testimonial`, `award`, `centered`, `dark`
 
 ## Section Styles
 

@@ -199,6 +199,123 @@
     ]
   },
   {
+    "id": "anchor-nav",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Navigation links as a list"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Sticky",
+            "value": "sticky"
+          },
+          {
+            "name": "Centered",
+            "value": "centered"
+          },
+          {
+            "name": "Pill",
+            "value": "pill"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "article",
+    "fields": [
+      {
+        "component": "text",
+        "name": "author",
+        "value": "",
+        "label": "Author",
+        "valueType": "string",
+        "description": "Author name"
+      },
+      {
+        "component": "text",
+        "name": "authorRole",
+        "value": "",
+        "label": "Author Role",
+        "valueType": "string",
+        "description": "Author title/role"
+      },
+      {
+        "component": "text",
+        "name": "readTime",
+        "value": "",
+        "label": "Read Time",
+        "valueType": "string",
+        "description": "Estimated read time"
+      },
+      {
+        "component": "text",
+        "name": "category",
+        "value": "",
+        "label": "Category",
+        "valueType": "string",
+        "description": "Article category tag"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "description": "Hero/featured image"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Article body content"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "With TOC",
+            "value": "with-toc"
+          },
+          {
+            "name": "With Sidebar",
+            "value": "with-sidebar"
+          },
+          {
+            "name": "With Share",
+            "value": "with-share"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Breadcrumb links as a list"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -733,6 +850,58 @@
           {
             "name": "With Icon List",
             "value": "with-icon-list"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "description": "Quote text"
+      },
+      {
+        "component": "text",
+        "name": "attribution",
+        "value": "",
+        "label": "Attribution",
+        "valueType": "string",
+        "description": "Source/author name"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "description": "Optional logo or author image"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Testimonial",
+            "value": "testimonial"
+          },
+          {
+            "name": "Award",
+            "value": "award"
+          },
+          {
+            "name": "Centered",
+            "value": "centered"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
           }
         ]
       }

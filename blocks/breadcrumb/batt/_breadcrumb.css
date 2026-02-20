@@ -1,0 +1,14 @@
+@import url('../breadcrumb.css');
+
+/* BATT Breadcrumb brand overrides */
+.breadcrumb a {
+  color: var(--link-color);
+}
+
+.breadcrumb .breadcrumb-separator {
+  color: var(--color-text-secondary, #6e6e6e);
+}
+
+.breadcrumb .breadcrumb-current {
+  color: var(--color-text-primary, #333);
+}

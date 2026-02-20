@@ -1,0 +1,13 @@
+@import url('../anchor-nav.css');
+
+/* BATT Anchor Nav brand overrides */
+.anchor-nav {
+  background: var(--color-bg-primary, #fff);
+  border-bottom-color: var(--color-border, #d2d2d2);
+}
+
+.anchor-nav .anchor-nav-list a:hover,
+.anchor-nav .anchor-nav-list a.anchor-nav-active {
+  color: var(--link-color);
+  border-bottom-color: var(--link-color);
+}
